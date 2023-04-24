@@ -1,0 +1,91 @@
+// убираем у всего границы, внешние и внутренние отступы,
+// ставим псевдоэлементам значение border-box, заставляющее учитывать отступы в размерах width/height
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+	&:before,
+	&:after {
+		box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		-webkit-box-sizing: border-box;
+	}
+}
+
+// убираем границы при нажатии/наведении на элементы
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+// убрать стрелки у input[type="number"]
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+	appearance: none;
+	-moz-appearance: textfield;
+}
+
+// заставляем формы наследовать шрифты
+input,
+button,
+textarea,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+textarea {
+	resize: none;
+}
+
+button {
+	cursor: pointer;
+	color: inherit;
+	background: none;
+}
+button::moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+ul,
+li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}

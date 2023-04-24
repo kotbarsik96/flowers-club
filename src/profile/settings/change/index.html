@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('../../../html-snippets/head.html')
+    <link rel="stylesheet" href="/flowers-club/css/swiper-bundle.min.css">
+    <title>Клуб Садоводов</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            @@include("../../../html-snippets/header-aside.html")
+            <div class="content profile">
+                @@include("../../../html-snippets/profile-nav-tile.html")
+                <div class="profile__content">
+                    <form class="form tile">
+                        <section class="form__section">
+                            <div class="form__section-head">
+                                <h4 class="form__title">
+                                    <label for="profile-about">О себе</label>
+                                </h4>
+                                <div class="form__section-description">
+                                    <span class="required-sign"></span>
+                                    <span>отмечены поля, обязательные для заполнения</span>
+                                </div>
+                            </div>
+                            <div class="text-input text-input--textarea">
+                                <div class="text-input__wrapper">
+                                    <textarea class="text-input__input" name="user-profile" id="profile-about"></textarea>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section">
+                            <div class="form__section-head">
+                                <h4 class="form__title">
+                                    <label class="required-sign" for="user-name">
+                                        Имя
+                                    </label>
+                                </h4>
+                            </div>
+                            <div class="text-input text-input--standard">
+                                <div class="text-input__wrapper">
+                                    <input class="text-input__input" id="user-name" name="user-profile" type="text">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section">
+                            <div class="form__section-head">
+                                <h4 class="form__title">
+                                    <label for="user-surname">Фамилия</label>
+                                </h4>
+                                <div class="form__section-description form__section-description--flex">
+                                    <label class="form__section-description-text" for="show-user-name">
+                                        Показывать фамилию на сайте
+                                    </label>
+                                    <label class="toggle-button">
+                                        <input id="show-user-name" type="checkbox" name="user-profile">
+                                        <span class="toggle-button__container"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="text-input text-input--standard">
+                                <div class="text-input__wrapper">
+                                    <input class="text-input__input" id="user-surname" name="user-profile" type="text">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section">
+                            <div class="form__section-head">
+                                <h4 class="form__title">
+                                    <label for="user-patronymic">Отчество</label>
+                                </h4>
+                            </div>
+                            <div class="text-input text-input--standard">
+                                <div class="text-input__wrapper">
+                                    <input class="text-input__input" id="user-patronymic" name="user-profile"
+                                        type="text">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section">
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        Пол
+                                    </h4>
+                                </div>
+                                <div class="radio-select">
+                                    <label class="radio-select__label">
+                                        <input type="radio" name="user-profile-gender" value="Мужской">
+                                        <span
+                                            class="radio-select__icon icon-wrapper icon-wrapper--circle icon-male-sign"></span>
+                                        <span class="radio-select__text">Мужской</span>
+                                    </label>
+                                    <label class="radio-select__label">
+                                        <input type="radio" name="user-profile-gender" value="Женский">
+                                        <span
+                                            class="radio-select__icon icon-wrapper icon-wrapper--circle icon-female-sign"></span>
+                                        <span class="radio-select__text">Женский</span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        <label for="user-birthdate">
+                                            Дата рождения
+                                        </label>
+                                    </h4>
+                                </div>
+                                <div class="text-input text-input--standard" data-params="mask:../../....; numbersOnly:/">
+                                    <div class="text-input__wrapper">
+                                        <input class="text-input__input" type="text" id="user-birthdate" name="profile"
+                                            placeholder="01/01/2000">
+                                        <span class="text-input__icon icon-calendar"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section form__section--flex">
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        <label class="required-sign" for="user-email">
+                                            E-mail
+                                        </label>
+                                    </h4>
+                                </div>
+                                <div class="text-input text-input--standard">
+                                    <div class="text-input__wrapper">
+                                        <input class="text-input__input" id="user-email" name="profile" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        <label class="required-sign" for="user-phone">
+                                            Телефон
+                                        </label>
+                                    </h4>
+                                </div>
+                                <div class="text-input text-input--standard" data-params="mask:\+7\-\(...\)\-...\-..\-..; numbersOnly:\s+()\-">
+                                    <div class="text-input__wrapper">
+                                        <input class="text-input__input" name="profile" id="user-phone" type="text" placeholder="+7 123 456 78 90">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section form__section--flex">
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        <label for="user-city">
+                                            Город
+                                        </label>
+                                    </h4>
+                                </div>
+                                <div class="text-input text-input--standard">
+                                    <div class="text-input__wrapper">
+                                        <input class="text-input__input" id="user-city" name="profile" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section checkboxes-list--flex">
+                            <label class="checkbox-item checkbox-item--gray">
+                                <input type="checkbox" name="profile">
+                                <span class="checkbox-item__checkbox icon-checkmark checkbox-item__checkbox icon-checkmark--bigger icon-checkmark" style="--checkbox_color: var(--gray_pink)"></span>
+                                <span class="checkbox-item__text">
+                                    соглашаюсь на
+                                    <span class="checkbox-item__link">
+                                        обработку персональных данных
+                                    </span>
+                                </span>
+                            </label>
+                            <label class="checkbox-item checkbox-item--gray">
+                                <input type="checkbox" name="profile">
+                                <span class="checkbox-item__checkbox icon-checkmark checkbox-item__checkbox icon-checkmark--bigger"
+                                    style="--checkbox_color: var(--blue);"></span>
+                                <span class="checkbox-item__text">
+                                    соглашаюсь получать рассылку
+                                </span>
+                            </label>
+                        </section>
+                        <section class="form__section form__section--flex">
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        <label for="user-gardening_experience">
+                                            Садоводческий стаж с
+                                        </label>
+                                    </h4>
+                                </div>
+                                <div class="text-input text-input--standard">
+                                    <div class="text-input__wrapper">
+                                        <input class="text-input__input" id="user-gardening_experience" name="profile"
+                                            type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        <label for="user-usda_zone">
+                                            Зона USDA
+                                        </label>
+                                    </h4>
+                                </div>
+                                <div class="text-input text-input--standard">
+                                    <div class="text-input__wrapper">
+                                        <input class="text-input__input" id="user-usda_zone" name="profile" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section form__section--flex">
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        Условия в саду
+                                    </h4>
+                                </div>
+                                <div class="checkboxes-list">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Продуваемый
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Тихий (ветров мало)
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Открытый
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Защищенное место (в лесу)
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Другое
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        Почва в саду
+                                    </h4>
+                                </div>
+                                <div class="checkboxes-list">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Глина
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Суглинок
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Песок
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Торфяники
+                                        </span>
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="profile">
+                                        <span class="checkbox-item__checkbox icon-checkmark"></span>
+                                        <span class="checkbox-item__text">
+                                            Другое
+                                        </span>
+                                    </label>
+                                </div>
+                            </div>
+                        </section>
+                        <button class="button button--simple" type="submit">
+                            Сохранить изменения
+                        </button>
+                    </form>
+                    <form class="form tile">
+                        <div class="form__section-head">
+                            <h2 class="form__main-title">
+                                Адрес доставки
+                            </h2>
+                            <div class="form__section-description">
+                                <span class="required-sign"></span>
+                                <span>отмечены поля, обязательные для заполнения</span>
+                            </div>
+                        </div>
+                        <section class="form__section">
+                            <div class="form__section-head">
+                                <h4 class="form__title">
+                                    <label class="required-sign" for="user_address-city">
+                                        Населенный пункт
+                                    </label>
+                                </h4>
+                            </div>
+                            <div class="text-input">
+                                <div class="text-input__wrapper">
+                                    <input class="text-input__input" id="user_address-city" type="text">
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section form__section--flex">
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        <label class="required-sign" for="user_address-street">
+                                            Улица
+                                        </label>
+                                    </h4>
+                                </div>
+                                <div class="text-input">
+                                    <div class="text-input__wrapper">
+                                        <input class="text-input__input" id="user_address-street" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__section-item form__item-flex">
+                                <div class="form__item-item">
+                                    <div class="form__section-head">
+                                        <h4 class="form__title">
+                                            <label class="required-sign" for="user_address-house">
+                                                Дом
+                                            </label>
+                                        </h4>
+                                    </div>
+                                    <div class="text-input">
+                                        <div class="text-input__wrapper">
+                                            <input class="text-input__input" id="user_address-house" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__item-item">
+                                    <div class="form__section-head">
+                                        <h4 class="form__title">
+                                            <label class="required-sign" for="user_address-flat">
+                                                Квартира
+                                            </label>
+                                        </h4>
+                                    </div>
+                                    <div class="text-input">
+                                        <div class="text-input__wrapper">
+                                            <input class="text-input__input" id="user_address-flat" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__item-item">
+                                    <div class="form__section-head">
+                                        <h4 class="form__title">
+                                            <label for="user_address-frame">
+                                                Корпус
+                                            </label>
+                                        </h4>
+                                    </div>
+                                    <div class="text-input">
+                                        <div class="text-input__wrapper">
+                                            <input class="text-input__input" id="user_address-frame" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section class="form__section form__section--flex">
+                            <div class="form__section-item">
+                                <div class="form__section-head">
+                                    <h4 class="form__title">
+                                        <label class="required-sign" for="user_address-index">
+                                            Индекс
+                                        </label>
+                                    </h4>
+                                </div>
+                                <div class="text-input">
+                                    <div class="text-input__wrapper">
+                                        <input class="text-input__input" id="user_address-index" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <button class="button button--simple" type="submit">
+                            Сохранить изменения
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/flowers-club/js/swiper-bundle.min.js"></script>
+    <script src="/flowers-club/js/scripts.js"></script>
+    <script src="/flowers-club/js/forms.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('../../html-snippets/head.html')
+    <link rel="stylesheet" href="/flowers-club/css/swiper-bundle.min.css">
+    <title>Клуб Садоводов</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            @@include("../../html-snippets/header-aside.html")
+            <div class="content profile">
+                @@include("../../html-snippets/profile-nav-tile.html")
+                <div class="profile__content">
+                    <div class="profile__user profile-user tile">
+                        <div class="profile-user__main">
+                            <div class="profile-user__upper">
+                                <div class="profile-user__avatar-name">
+                                    <div class="profile-user__avatar">
+                                        <img class="profile-user__avatar-img"
+                                            src="/flowers-club/img/users/marmi/avatar.jpg" alt="Аватар">
+                                        <button
+                                            class="profile-user__avatar-edit icon-wrapper icon-wrapper--circle icon-pen"
+                                            type="button"></button>
+                                    </div>
+                                    <div class="profile-user__name-location">
+                                        <div class="profile-user__name">Марьяна Ми</div>
+                                        <div class="profile-user__location">
+                                            <span class="icon-location"></span>
+                                            Краснодар
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-user__buttons"
+                                    data-dynamic-adaptive=".profile__buttons-mobile, 599">
+                                    <button class="button" type="button">
+                                        <span class="icon-crown"></span>
+                                        Вступить в клуб
+                                    </button>
+                                    <a href="/flowers-club/profile/settings/change/" class="button button--gray-pink"
+                                        type="button">
+                                        Изменить профиль
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="profile-user__description">
+                                <p>
+                                    Выращиваю в своем саду розы и тюльпаны
+                                </p>
+                            </div>
+                            <div class="profile-user__stats">
+                                <ul class="profile-user__stats-forum stats-forum">
+                                    <li class="stats-forum__item">
+                                        <div class="stats-forum__item-title">
+                                            Тем на форуме
+                                        </div>
+                                        <div class="stats-forum__item-number">
+                                            0
+                                        </div>
+                                    </li>
+                                    <li class="stats-forum__item">
+                                        <div class="stats-forum__item-title">
+                                            Комментариев
+                                        </div>
+                                        <div class="stats-forum__item-number">
+                                            0
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="profile-stats">
+                                    <li class="profile-stats__item">
+                                        <div class="profile-stats__title">Стаж садовода</div>
+                                        <div class="profile-stats__number">4 года</div>
+                                    </li>
+                                    <li class="profile-stats__item">
+                                        <div class="profile-stats__title">Зона USDA</div>
+                                        <div class="profile-stats__number">Вторая</div>
+                                    </li>
+                                    <li class="profile-stats__item">
+                                        <div class="profile-stats__title">Любимые растения</div>
+                                        <div class="profile-stats__number">Розы</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="profile-user__tabs tabs">
+                            <div class="tabs__buttons-list">
+                                <button class="tabs__button">
+                                    Мой сад
+                                </button>
+                                <button class="tabs__button">
+                                    Избранные статьи
+                                </button>
+                                <button class="tabs__button">
+                                    Понравившиеся товары
+                                </button>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__content-item">
+                                    <ul class="articles-flex__list">
+                                        <li class="articles-flex__item">
+                                            <article
+                                                class="article-card article-card--big article-card--title-only article-card--flexible">
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/9.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li class="articles-flex__item">
+                                            <article
+                                                class="article-card article-card--big article-card--title-only article-card--flexible">
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/10.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li class="articles-flex__item">
+                                            <article
+                                                class="article-card article-card--big article-card--title-only article-card--flexible">
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/11.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li class="articles-flex__item">
+                                            <article
+                                                class="article-card article-card--big article-card--title-only article-card--flexible">
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/12.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li class="articles-flex__item">
+                                            <article
+                                                class="article-card article-card--big article-card--title-only article-card--flexible">
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/13.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li class="articles-flex__item">
+                                            <article
+                                                class="article-card article-card--big article-card--title-only article-card--flexible">
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/14.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                </div>
+                                            </article>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tabs__content-item">
+                                    <ul class="articles-flex__list">
+                                        <li class="articles-flex__item">
+                                            <article class="article-card article-card--flexible">
+                                                <div class="article-card__mark">
+                                                    <button class="article-card__icon icon-wrapper icon-bookmark"
+                                                        type="button"></button>
+                                                </div>
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/6.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <ul class="article-card__topics">
+                                                        <li class="article-card__topic">Советы</li>
+                                                    </ul>
+                                                    <div class="article-card__date icon-calendar">
+                                                        02.03.2023
+                                                    </div>
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                    <p class="article-card__text">
+                                                        В Тюменской области начались лекции онлайн-школы "Здоровый
+                                                        садовод",
+                                                        присоединиться
+                                                        к которой могут все желающие. Любителям работы на приусадебных
+                                                        участках
+                                                        расскажут о
+                                                        том, как следить за своим здоровьем и как оказывать первую
+                                                        помощь...
+                                                    </p>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li class="articles-flex__item">
+                                            <article class="article-card article-card--flexible">
+                                                <div class="article-card__mark">
+                                                    <button class="article-card__icon icon-wrapper icon-bookmark"
+                                                        type="button"></button>
+                                                </div>
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/7.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <ul class="article-card__topics">
+                                                        <li class="article-card__topic">Советы</li>
+                                                    </ul>
+                                                    <div class="article-card__date icon-calendar">
+                                                        02.03.2023
+                                                    </div>
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                    <p class="article-card__text">
+                                                        В Тюменской области начались лекции онлайн-школы "Здоровый
+                                                        садовод",
+                                                        присоединиться
+                                                        к которой могут все желающие. Любителям работы на приусадебных
+                                                        участках
+                                                        расскажут о
+                                                        том, как следить за своим здоровьем и как оказывать первую
+                                                        помощь...
+                                                    </p>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li class="articles-flex__item">
+                                            <article class="article-card article-card--flexible">
+                                                <div class="article-card__mark">
+                                                    <button class="article-card__icon icon-wrapper icon-bookmark"
+                                                        type="button"></button>
+                                                </div>
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/5.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <ul class="article-card__topics">
+                                                        <li class="article-card__topic">Советы</li>
+                                                    </ul>
+                                                    <div class="article-card__date icon-calendar">
+                                                        02.03.2023
+                                                    </div>
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                    <p class="article-card__text">
+                                                        В Тюменской области начались лекции онлайн-школы "Здоровый
+                                                        садовод",
+                                                        присоединиться
+                                                        к которой могут все желающие. Любителям работы на приусадебных
+                                                        участках
+                                                        расскажут о
+                                                        том, как следить за своим здоровьем и как оказывать первую
+                                                        помощь...
+                                                    </p>
+                                                </div>
+                                            </article>
+                                        </li>
+                                        <li class="articles-flex__item">
+                                            <article class="article-card article-card--flexible">
+                                                <div class="article-card__mark">
+                                                    <button class="article-card__icon icon-wrapper icon-bookmark"
+                                                        type="button"></button>
+                                                </div>
+                                                <div class="article-card__image-container">
+                                                    <img src="/flowers-club/img/article-cards/8.png"
+                                                        alt="Как выращивать фиолетовый картофель"
+                                                        class="article-card__image">
+                                                </div>
+                                                <div class="article-card__info">
+                                                    <ul class="article-card__topics">
+                                                        <li class="article-card__topic">Советы</li>
+                                                    </ul>
+                                                    <div class="article-card__date icon-calendar">
+                                                        02.03.2023
+                                                    </div>
+                                                    <h4 class="article-card__title">
+                                                        <a href="/flowers-club/articles/violet-potato">
+                                                            Как выращивать фиолетовый картофель
+                                                        </a>
+                                                    </h4>
+                                                    <p class="article-card__text">
+                                                        В Тюменской области начались лекции онлайн-школы "Здоровый
+                                                        садовод",
+                                                        присоединиться
+                                                        к которой могут все желающие. Любителям работы на приусадебных
+                                                        участках
+                                                        расскажут о
+                                                        том, как следить за своим здоровьем и как оказывать первую
+                                                        помощь...
+                                                    </p>
+                                                </div>
+                                            </article>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="tabs__content-item">
+                                    <ul class="products-list">
+                                        <li class="products-list__item">
+                                            <div class="product-card">
+                                                <div class="product-card__buttons">
+                                                    <button
+                                                        class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                    <button
+                                                        class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                </div>
+                                                <div class="product-card__image">
+                                                    <img class="product-card__image-img"
+                                                        src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                        alt="Голден Делишес">
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__rating star-rating"></div>
+                                                    <div class="product-card__title">
+                                                        <a href="#">
+                                                            Яблоки Голден Делишес
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-card__price">
+                                                        390 ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="products-list__item">
+                                            <div class="product-card">
+                                                <div class="product-card__buttons">
+                                                    <button
+                                                        class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                    <button
+                                                        class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                </div>
+                                                <div class="product-card__image">
+                                                    <img class="product-card__image-img"
+                                                        src="/flowers-club/img/products/apples/ligolred/1.png"
+                                                        alt="Голден Делишес">
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__rating star-rating"></div>
+                                                    <div class="product-card__title">
+                                                        <a href="#">
+                                                            Яблоки Лиголред
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-card__price">
+                                                        420 ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="products-list__item">
+                                            <div class="product-card">
+                                                <div class="product-card__buttons">
+                                                    <button
+                                                        class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                    <button
+                                                        class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                </div>
+                                                <div class="product-card__image">
+                                                    <img class="product-card__image-img"
+                                                        src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                        alt="Голден Делишес">
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__rating star-rating"></div>
+                                                    <div class="product-card__title">
+                                                        <a href="#">
+                                                            Яблоки Голден Делишес
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-card__price">
+                                                        390 ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="products-list__item">
+                                            <div class="product-card">
+                                                <div class="product-card__buttons">
+                                                    <button
+                                                        class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                    <button
+                                                        class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                </div>
+                                                <div class="product-card__image">
+                                                    <img class="product-card__image-img"
+                                                        src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                        alt="Голден Делишес">
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__rating star-rating"></div>
+                                                    <div class="product-card__title">
+                                                        <a href="#">
+                                                            Яблоки Голден Делишес
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-card__price">
+                                                        390 ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="products-list__item">
+                                            <div class="product-card">
+                                                <div class="product-card__buttons">
+                                                    <button
+                                                        class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                    <button
+                                                        class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                </div>
+                                                <div class="product-card__image">
+                                                    <img class="product-card__image-img"
+                                                        src="/flowers-club/img/products/apples/ligolred/1.png"
+                                                        alt="Голден Делишес">
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__rating star-rating"></div>
+                                                    <div class="product-card__title">
+                                                        <a href="#">
+                                                            Яблоки Лиголред
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-card__price">
+                                                        420 ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="products-list__item">
+                                            <div class="product-card">
+                                                <div class="product-card__buttons">
+                                                    <button
+                                                        class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                    <button
+                                                        class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                </div>
+                                                <div class="product-card__image">
+                                                    <img class="product-card__image-img"
+                                                        src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                        alt="Голден Делишес">
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__rating star-rating"></div>
+                                                    <div class="product-card__title">
+                                                        <a href="#">
+                                                            Яблоки Голден Делишес
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-card__price">
+                                                        390 ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="products-list__item">
+                                            <div class="product-card">
+                                                <div class="product-card__buttons">
+                                                    <button
+                                                        class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                    <button
+                                                        class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                </div>
+                                                <div class="product-card__image">
+                                                    <img class="product-card__image-img"
+                                                        src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                        alt="Голден Делишес">
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__rating star-rating"></div>
+                                                    <div class="product-card__title">
+                                                        <a href="#">
+                                                            Яблоки Голден Делишес
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-card__price">
+                                                        390 ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="products-list__item">
+                                            <div class="product-card">
+                                                <div class="product-card__buttons">
+                                                    <button
+                                                        class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                    <button
+                                                        class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                </div>
+                                                <div class="product-card__image">
+                                                    <img class="product-card__image-img"
+                                                        src="/flowers-club/img/products/apples/ligolred/1.png"
+                                                        alt="Голден Делишес">
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__rating star-rating"></div>
+                                                    <div class="product-card__title">
+                                                        <a href="#">
+                                                            Яблоки Лиголред
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-card__price">
+                                                        420 ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="products-list__item">
+                                            <div class="product-card">
+                                                <div class="product-card__buttons">
+                                                    <button
+                                                        class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                    <button
+                                                        class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                </div>
+                                                <div class="product-card__image">
+                                                    <img class="product-card__image-img"
+                                                        src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                        alt="Голден Делишес">
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__rating star-rating"></div>
+                                                    <div class="product-card__title">
+                                                        <a href="#">
+                                                            Яблоки Голден Делишес
+                                                        </a>
+                                                    </div>
+                                                    <div class="product-card__price">
+                                                        390 ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__buttons-mobile"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/flowers-club/js/swiper-bundle.min.js"></script>
+    <script src="/flowers-club/js/scripts.js"></script>
+</body>
+
+</html>

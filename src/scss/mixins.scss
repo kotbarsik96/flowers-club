@@ -1,0 +1,11 @@
+// <МИКСИНЫ>======================================================================================
+@mixin adaptive-font($pcSize, $mobSize) {
+    $adaptSize: $pcSize - $mobSize;
+    $devAdaptSize: $adaptSize + $adaptSize * 0.7;
+    @media (max-width: 767px){
+        font-size: calc(#{$mobSize}px + #{$devAdaptSize} * (100vw - 320px) / #{$screenSize});
+    }
+    @media (min-width: 768px){
+        font-size: calc(#{$mobSize}px + #{$adaptSize} * (100vw/#{$screenSize}));
+    }
+}

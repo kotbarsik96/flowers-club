@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('../../../html-snippets/head.html')
+    <title>Каталог</title>
+    <style>
+        :root {
+            --article_topic_color: var(--red);
+            --article-card-noimage_color: #fff4f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            @@include("../../../html-snippets/header-aside.html")
+            @@include("../../../html-snippets/catalog.html")
+            <div class="content">
+                <div class="content__container">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link link" href="#">Каталог</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link link" href="#">Плодовые деревья</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <span class="breadcrumbs__link link">Яблони</span>
+                        </li>
+                    </ul>
+                    <div class="shop">
+                        <div class="shop__filter filter" data-dynamic-adaptive="#shop-cards-filter-mobile, 767">
+                            <button class="filter__button" type="button">
+                                <span class="filter__button-icon icon-filter"></span>
+                                <span class="filter__button-text">Фильтр</span>
+                            </button>
+                            <div class="filter__body">
+                                <div class="filter__body-header">
+                                    <button class="filter__close-button" type="button">
+                                        <span class="filter__button-icon menu-button __active">
+                                            <span class="menu-button__item"></span>
+                                            <span class="menu-button__item"></span>
+                                            <span class="menu-button__item"></span>
+                                        </span>
+                                        <span class="filter__button-text">Фильтры</span>
+                                    </button>
+                                </div>
+                                <div class="filter__body-blocks">
+                                    <div class="filter__block">
+                                        <h4 class="filter__block-title">Высота</h4>
+                                        <div class="filter__block-content">
+                                            <div class="range range--double"
+                                                data-params="minValue:0; maxValue:3000; valueSuffix:см">
+                                                <div class="range__values">
+                                                    <input class="range__value-item range__value-item--min" type="text">
+                                                    <input class="range__value-item range__value-item--max" type="text">
+                                                </div>
+                                                <div class="range__scale">
+                                                    <div class="range__bar"></div>
+                                                    <div class="range__toggler range__toggler--min"></div>
+                                                    <div class="range__toggler range__toggler--max"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__block">
+                                        <h4 class="filter__block-title">Вес</h4>
+                                        <div class="filter__block-content">
+                                            <div class="range range--double"
+                                                data-params="minValue:300; maxValue:1200; valueSuffix:г">
+                                                <div class="range__values">
+                                                    <input class="range__value-item range__value-item--min" type="text">
+                                                    <input class="range__value-item range__value-item--max" type="text">
+                                                </div>
+                                                <div class="range__scale">
+                                                    <div class="range__bar"></div>
+                                                    <div class="range__toggler range__toggler--min"></div>
+                                                    <div class="range__toggler range__toggler--max"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__block">
+                                        <h4 class="filter__block-title">Морозостойкость</h4>
+                                        <div class="filter__block-content">
+                                            <div class="range range--double"
+                                                data-params="minValue:0; maxValue:40; valuePrefix:-; valueSuffix:°; ignoreMinusSign:true">
+                                                <div class="range__values">
+                                                    <input class="range__value-item range__value-item--min" type="text">
+                                                    <input class="range__value-item range__value-item--max" type="text">
+                                                </div>
+                                                <div class="range__scale">
+                                                    <div class="range__bar"></div>
+                                                    <div class="range__toggler range__toggler--min"></div>
+                                                    <div class="range__toggler range__toggler--max"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__block">
+                                        <h4 class="filter__block-title">Срок созревания</h4>
+                                        <div class="filter__block-content">
+                                            <div>
+                                                <label class="radio-item">
+                                                    <input type="radio" name="shop_filter-ripening_period">
+                                                    <span class="radio-item__radio"></span>
+                                                    <span class="radio-item__text">
+                                                        Раннеспелые сорта
+                                                    </span>
+                                                </label>
+                                                <label class="radio-item">
+                                                    <input type="radio" name="shop_filter-ripening_period">
+                                                    <span class="radio-item__radio"></span>
+                                                    <span class="radio-item__text">
+                                                        Среднеранние сорта
+                                                    </span>
+                                                </label>
+                                                <label class="radio-item">
+                                                    <input type="radio" name="shop_filter-ripening_period">
+                                                    <span class="radio-item__radio"></span>
+                                                    <span class="radio-item__text">
+                                                        Среднеспелые сорта
+                                                    </span>
+                                                </label>
+                                                <label class="radio-item">
+                                                    <input type="radio" name="shop_filter-ripening_period">
+                                                    <span class="radio-item__radio"></span>
+                                                    <span class="radio-item__text">
+                                                        Позднеспелые сорта
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="shop__cards">
+                            <div class="shop__cards-head">
+                                <div id="shop-cards-filter-mobile"></div>
+                                <div class="shop__selects">
+                                    <div class="shop__selects-title">Сортировка:</div>
+                                    <div class="select">
+                                        <div class="select__value-container">
+                                            <div class="select__value icon-chevron-down"></div>
+                                        </div>
+                                        <ul class="select__options-list" role="listbox">
+                                            <li class="select__option" role="option" aria-selected>
+                                                рекомендуем
+                                            </li>
+                                            <li class="select__option" role="option">
+                                                алфавит: а-я
+                                            </li>
+                                            <li class="select__option" role="option">
+                                                алфавит: я-а
+                                            </li>
+                                            <li class="select__option" role="option">
+                                                цена: от дешевых к дорогим
+                                            </li>
+                                            <li class="select__option" role="option">
+                                                цена: от дорогих к дешевым
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="shop__products-list products-list">
+                                <li class="products-list__item">
+                                    <div class="product-card">
+                                        <div class="product-card__buttons">
+                                            <button
+                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                            <button
+                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <a href="/flowers-club/shop/catalog/trees_plodovye/product/">
+                                                <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                alt="Голден Делишес">
+                                            </a>
+                                        </div>
+                                        <div class="product-card__info">
+                                            <div class="product-card__rating star-rating"></div>
+                                            <div class="product-card__title">
+                                                <a href="#">
+                                                    Яблоки Голден Делишес
+                                                </a>
+                                            </div>
+                                            <div class="product-card__price">
+                                                390 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="products-list__item">
+                                    <div class="product-card">
+                                        <div class="product-card__buttons">
+                                            <button
+                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                            <button
+                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/ligolred/1.png"
+                                                alt="Голден Делишес">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <div class="product-card__rating star-rating"></div>
+                                            <div class="product-card__title">
+                                                <a href="#">
+                                                    Яблоки Лиголред
+                                                </a>
+                                            </div>
+                                            <div class="product-card__price">
+                                                420 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="products-list__item">
+                                    <div class="product-card">
+                                        <div class="product-card__buttons">
+                                            <button
+                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                            <button
+                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                alt="Голден Делишес">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <div class="product-card__rating star-rating"></div>
+                                            <div class="product-card__title">
+                                                <a href="#">
+                                                    Яблоки Голден Делишес
+                                                </a>
+                                            </div>
+                                            <div class="product-card__price">
+                                                390 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="products-list__item">
+                                    <div class="product-card">
+                                        <div class="product-card__buttons">
+                                            <button
+                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                            <button
+                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/ligolred/1.png"
+                                                alt="Голден Делишес">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <div class="product-card__rating star-rating"></div>
+                                            <div class="product-card__title">
+                                                <a href="#">
+                                                    Яблоки Лиголред
+                                                </a>
+                                            </div>
+                                            <div class="product-card__price">
+                                                420 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="products-list__item">
+                                    <div class="product-card">
+                                        <div class="product-card__buttons">
+                                            <button
+                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                            <button
+                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                alt="Голден Делишес">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <div class="product-card__rating star-rating"></div>
+                                            <div class="product-card__title">
+                                                <a href="#">
+                                                    Яблоки Голден Делишес
+                                                </a>
+                                            </div>
+                                            <div class="product-card__price">
+                                                390 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="products-list__item">
+                                    <div class="product-card">
+                                        <div class="product-card__buttons">
+                                            <button
+                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                            <button
+                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/ligolred/1.png"
+                                                alt="Голден Делишес">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <div class="product-card__rating star-rating"></div>
+                                            <div class="product-card__title">
+                                                <a href="#">
+                                                    Яблоки Лиголред
+                                                </a>
+                                            </div>
+                                            <div class="product-card__price">
+                                                420 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="products-list__item">
+                                    <div class="product-card">
+                                        <div class="product-card__buttons">
+                                            <button
+                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                            <button
+                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                alt="Голден Делишес">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <div class="product-card__rating star-rating"></div>
+                                            <div class="product-card__title">
+                                                <a href="#">
+                                                    Яблоки Голден Делишес
+                                                </a>
+                                            </div>
+                                            <div class="product-card__price">
+                                                390 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="products-list__item">
+                                    <div class="product-card">
+                                        <div class="product-card__buttons">
+                                            <button
+                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                            <button
+                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                        </div>
+                                        <div class="product-card__image">
+                                            <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/ligolred/1.png"
+                                                alt="Голден Делишес">
+                                        </div>
+                                        <div class="product-card__info">
+                                            <div class="product-card__rating star-rating"></div>
+                                            <div class="product-card__title">
+                                                <a href="#">
+                                                    Яблоки Лиголред
+                                                </a>
+                                            </div>
+                                            <div class="product-card__price">
+                                                420 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="shop__pages">
+                                <a class="shop__pages-button shop__pages-button--prev icon-chevron-down"
+                                    href="/flowers-club/shop/catalog/trees_plodovye&page=1"></a>
+                                <ul class="shop__pages-list">
+                                    <li class="shop__pages-item">
+                                        <a class="shop__pages-link __active"
+                                            href="/flowers-club/shop/catalog/trees_plodovye&page=1">
+                                            1
+                                        </a>
+                                    </li>
+                                    <li class="shop__pages-item">
+                                        <a class="shop__pages-link"
+                                            href="/flowers-club/shop/catalog/trees_plodovye&page=2">
+                                            2
+                                        </a>
+                                    </li>
+                                    <li class="shop__pages-item">
+                                        <a class="shop__pages-link"
+                                            href="/flowers-club/shop/catalog/trees_plodovye&page=3">
+                                            3
+                                        </a>
+                                    </li>
+                                    <li class="shop__pages-item">
+                                        <a class="shop__pages-link"
+                                            href="/flowers-club/shop/catalog/trees_plodovye&page=4">
+                                            4
+                                        </a>
+                                    </li>
+                                </ul>
+                                <a class="shop__pages-button shop__pages-button--next icon-chevron-down"
+                                    href="/flowers-club/shop/catalog/trees_plodovye&page=3"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/flowers-club/js/scripts.js"></script>
+    <script src="/flowers-club/js/shop.js"></script>
+</body>
+
+</html>

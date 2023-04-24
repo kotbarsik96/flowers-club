@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('../../../../html-snippets/head.html')
+    <link rel="stylesheet" href="/flowers-club/css/swiper-bundle.min.css">
+    <title>Каталог</title>
+    <style>
+        :root {
+            --article_topic_color: var(--red);
+            --article-card-noimage_color: #fff4f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            @@include("../../../../html-snippets/header-aside.html")
+            @@include("../../../../html-snippets/catalog.html")
+            <div class="content product-page">
+                <div class="content__container">
+                    <ul class="breadcrumbs">
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link link" href="#">Яблони</a>
+                        </li>
+                        <li class="breadcrumbs__item">
+                            <a class="breadcrumbs__link link" href="#">Яблоня Голден Делишес</a>
+                        </li>
+                    </ul>
+                </div>
+                <section class="product-page__info">
+                    <div class="product-page__image-container toggle-slider"
+                        data-params="sliderMedia:767; swiperSelector:.product-page__image-container; wrapperClass:product-page__images; slideClass:product-page__image-item; slidesPerView:1">
+                        <img class="product-page__main-img"
+                            src="/flowers-club/img/products/apples/golden-delicious/1.png" alt="Яблоня Голден Делишес">
+                        <ul class="product-page__images">
+                            <li class="product-page__image-item">
+                                <img src="/flowers-club/img/products/apples/golden-delicious/2.jpg"
+                                    alt="Яблоня Голден Делишес" class="product-page__img">
+                            </li>
+                            <li class="product-page__image-item">
+                                <img src="/flowers-club/img/products/apples/golden-delicious/2.jpg"
+                                    alt="Яблоня Голден Делишес" class="product-page__img">
+                            </li>
+                            <li class="product-page__image-item">
+                                <img src="/flowers-club/img/products/apples/golden-delicious/3.jpg"
+                                    alt="Яблоня Голден Делишес" class="product-page__img">
+                            </li>
+                            <li class="product-page__image-item">
+                                <img src="/flowers-club/img/products/apples/golden-delicious/4.jpg"
+                                    alt="Яблоня Голден Делишес" class="product-page__img">
+                            </li>
+                            <li class="product-page__image-item">
+                                <img src="/flowers-club/img/products/apples/golden-delicious/5.jpg"
+                                    alt="Яблоня Голден Делишес" class="product-page__img">
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="product-page__body product-body">
+                        <div class="product-body__main">
+                            <div class="product-body__main-info">
+                                <h2 class="product-body__title">
+                                    Яблоня Голден Делишес
+                                </h2>
+                                <div class="product-body__pricing">
+                                    <div class="product-body__pricing-price">
+                                        <span class="product-body__pricing-old">
+                                            510 ₽
+                                        </span>
+                                        <span class="product-body__pricing-current">
+                                            390 ₽
+                                        </span>
+                                    </div>
+                                    <div class="product-body__pricing-amount">
+                                        <div class="amount-change" data-params="minValue:1; maxValue:99">
+                                            <button class="amount-change__button amount-change__button--minus"
+                                                type="button">
+                                                -
+                                            </button>
+                                            <input class="amount-change__input" type="text">
+                                            <button class="amount-change__button amount-change__button--plus"
+                                                type="button">
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-body__block">
+                                    <div class="product-body__vendor-code">
+                                        Артикул: 65713
+                                    </div>
+                                    <div class="product-body__rating star-rating"></div>
+                                </div>
+                                <div class="product-body__block product-body__block--descriptions">
+                                    <div class="product-body__description">
+                                        <span class="product-body__description-title">Вес:</span>
+                                        <span class="product-body__description-content">400 г</span>
+                                    </div>
+                                    <div class="product-body__description">
+                                        <span class="product-body__description-title">Возраст:</span>
+                                        <span class="product-body__description-content">1 год</span>
+                                    </div>
+                                    <div class="product-body__description">
+                                        <span class="product-body__description-title">Подвой:</span>
+                                        <span class="product-body__description-content">яблоня, дичка, миндаль</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-body__buttons">
+                                <button class="button" type="button" data-popup-call="name:cart-added;">
+                                    <span class="icon-cart"></span>
+                                    В корзину
+                                </button>
+                                <button class="button" disabled type="button">
+                                    Нет в наличии
+                                </button>
+                                <button class="button button--gray-pink" type="button">
+                                    <span class="icon-heart"></span>
+                                    В избранное
+                                </button>
+                            </div>
+                        </div>
+                        <div class="product-body__tabs tabs">
+                            <div class="tabs__buttons-list">
+                                <button class="tabs__button">
+                                    Описание
+                                </button>
+                                <button class="tabs__button">
+                                    Особенности
+                                </button>
+                                <button class="tabs__button">
+                                    Отзывы
+                                </button>
+                                <button class="tabs__button">
+                                    Доставка и оплата
+                                </button>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__content-item">
+                                    <div class="product-tab">
+                                        <ul class="product-tab__statistics">
+                                            <li class="product-tab__statistics-item">
+                                                <img class="product-tab__statistics-icon"
+                                                    src="/flowers-club/img/icons/product-tabs/cold_resistance.svg">
+                                                <div class="product-tab__statistics-text">
+                                                    морозостойкость до -30°C
+                                                </div>
+                                            </li>
+                                            <li class="product-tab__statistics-item">
+                                                <img class="product-tab__statistics-icon"
+                                                    src="/flowers-club/img/icons/product-tabs/ruler.svg">
+                                                <div class="product-tab__statistics-text">
+                                                    до 3 м
+                                                </div>
+                                            </li>
+                                            <li class="product-tab__statistics-item">
+                                                <img class="product-tab__statistics-icon"
+                                                    src="/flowers-club/img/icons/product-tabs/grade.svg">
+                                                <div class="product-tab__statistics-text">
+                                                    раннеспелый сорт
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="product-tab__paragraph">
+                                            <h5 class="product-tab__paragraph-title">
+                                                Внешний вид
+                                            </h5>
+                                            <p class="product-tab__paragraph-text">
+                                                Грибовидная форма дерева садоводам проще ухаживать за растением и
+                                                собирать
+                                                урожай.
+                                                У листьев форма напоминает эллипс, средний размер, края зубчатые. У них
+                                                гладкий верх, низ покрыт коротким белым пушком.
+                                                В среднем вес плодов составляет 20 г. По бокам приплюснутые, кожица
+                                                гладкая
+                                                и тонкая. Сочетание кислот и сахаров создаёт великолепный вкус, нежную
+                                                мякоть и насыщенный абрикосовый запах.
+                                            </p>
+                                        </div>
+                                        <div class="product-tab__paragraph">
+                                            <h5 class="product-tab__paragraph-title">
+                                                История селекции
+                                            </h5>
+                                            <p class="product-tab__paragraph-text">
+                                                Сорт выведен в середине 80-х годов прошлого столетия селекционерами Л.
+                                                А.
+                                                Крамаренко и А. К. Скворцовым на базе Главного ботанического сада
+                                                методом
+                                                свободного опыления.
+                                                В Госреестр сорт включили в 2004 г. Сорт рекомендован к выращиванию в
+                                                Центральном регионе. При надлежащем укрытии может расти и в северных
+                                                регионах.
+                                            </p>
+                                        </div>
+                                        <div class="product-tab__paragraph">
+                                            <h5
+                                                class="product-tab__paragraph-title product-tab__paragraph-title--colored">
+                                                <img src="/flowers-club/img/icons/product-tabs/flowers_vase.svg"
+                                                    alt="Опылители" class="product-tab__paragraph-title-icon">
+                                                Опылители
+                                            </h5>
+                                            <p class="product-tab__paragraph-text">
+                                                Грибовидная форма дерева садоводам проще ухаживать за растением и
+                                                собирать
+                                                урожай.
+                                                У листьев форма напоминает эллипс, средний размер, края зубчатые. У них
+                                                гладкий верх, низ покрыт коротким белым пушком.
+                                                В среднем вес плодов составляет 20 г. По бокам приплюснутые, кожица
+                                                гладкая
+                                                и тонкая. Сочетание кислот и сахаров создаёт великолепный вкус, нежную
+                                                мякоть и насыщенный абрикосовый запах.
+                                            </p>
+                                            <ul class="product-tab__products-list products-list">
+                                                <li class="products-list__item">
+                                                    <div class="product-card">
+                                                        <div class="product-card__buttons">
+                                                            <button
+                                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                            <button
+                                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                        </div>
+                                                        <div class="product-card__image">
+                                                            <a
+                                                                href="/flowers-club/shop/catalog/trees_plodovye/product/">
+                                                                <img class="product-card__image-img"
+                                                                    src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                                    alt="Голден Делишес">
+                                                            </a>
+                                                        </div>
+                                                        <div class="product-card__info">
+                                                            <div class="product-card__rating star-rating"></div>
+                                                            <div class="product-card__title">
+                                                                <a href="#">
+                                                                    Яблоки Голден Делишес
+                                                                </a>
+                                                            </div>
+                                                            <div class="product-card__price">
+                                                                390 ₽
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="products-list__item">
+                                                    <div class="product-card">
+                                                        <div class="product-card__buttons">
+                                                            <button
+                                                                class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                                            <button
+                                                                class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                                        </div>
+                                                        <div class="product-card__image">
+                                                            <img class="product-card__image-img"
+                                                                src="/flowers-club/img/products/apples/ligolred/1.png"
+                                                                alt="Голден Делишес">
+                                                        </div>
+                                                        <div class="product-card__info">
+                                                            <div class="product-card__rating star-rating"></div>
+                                                            <div class="product-card__title">
+                                                                <a href="#">
+                                                                    Яблоки Лиголред
+                                                                </a>
+                                                            </div>
+                                                            <div class="product-card__price">
+                                                                420 ₽
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="product-tab__paragraph">
+                                            <h5
+                                                class="product-tab__paragraph-title product-tab__paragraph-title--colored">
+                                                <img src="/flowers-club/img/icons/product-tabs/flower.svg"
+                                                    alt="Цветение" class="product-tab__paragraph-title-icon">
+                                                Цветение
+                                            </h5>
+                                            <p class="product-tab__paragraph-text">
+                                                Светло-розовые цветки обладают диаметром в 3 см. Благоухают нежно и
+                                                приятно.
+                                            </p>
+                                        </div>
+                                        <div class="product-tab__paragraph">
+                                            <h5
+                                                class="product-tab__paragraph-title product-tab__paragraph-title--colored">
+                                                <img src="/flowers-club/img/icons/product-tabs/harvest.svg"
+                                                    alt="Урожайность" class="product-tab__paragraph-title-icon">
+                                                Урожайность
+                                            </h5>
+                                            <p class="product-tab__paragraph-text">
+                                                Светло-розовые цветки обладают диаметром в 3 см. Благоухают нежно и
+                                                приятно.
+                                            </p>
+                                        </div>
+                                        <div class="product-tab__line"></div>
+                                        <div class="product-tab__paragraph">
+                                            <h5
+                                                class="product-tab__paragraph-title product-tab__paragraph-title--center">
+                                                Сочетание с другими растениями
+                                            </h5>
+                                            <p class="product-tab__paragraph-text">
+                                                Абрикос сочетается со следующими растениями:
+                                            </p>
+                                            <ul class="product-tab__products-list products-list">
+                                                <li class="products-list__item">
+                                                    <div class="product-card product-card--min">
+                                                        <a class="product-card__image" href="#">
+                                                            <img src="/flowers-club/img/products/grapes/purple/1.png"
+                                                                alt="Виноград" class="product-card__image-img">
+                                                        </a>
+                                                        <div class="product-card__info">
+                                                            <div class="product-card__title">
+                                                                Виноград
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="products-list__item">
+                                                    <div class="product-card product-card--min">
+                                                        <a class="product-card__image" href="#">
+                                                            <img src="/flowers-club/img/products/peaches/orange/1.png"
+                                                                alt="Персик" class="product-card__image-img">
+                                                        </a>
+                                                        <div class="product-card__info">
+                                                            <div class="product-card__title">
+                                                                Персик
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="products-list__item">
+                                                    <div class="product-card product-card--min">
+                                                        <a class="product-card__image" href="#">
+                                                            <img src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                                alt="Яблоня" class="product-card__image-img">
+                                                        </a>
+                                                        <div class="product-card__info">
+                                                            <div class="product-card__title">
+                                                                Яблоня
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__content-item">
+                                    <div class="product-tab__paragraph spoiler __shown">
+                                        <h5 class="product-tab__paragraph-title spoiler__button">
+                                            Уход и посадка
+                                            <span class="spoiler__chevron icon-chevron-down"></span>
+                                        </h5>
+                                        <p class="product-tab__paragraph-text spoiler__content">
+                                            Технология посадка абрикоса Лель почти не отличается от посадки любого
+                                            другого дерева, однако стоит учитывать некоторые тонкости, чтобы
+                                            добиться
+                                            максимальной урожайности.
+                                            В Центральных регионах абрикос высаживают ранней весной, когда
+                                            начинается
+                                            сокодвижение. Подходящая температура для посадки абрикоса в ночью – это
+                                            +10…+120С. Ближе к зиме саженец образует мощную корневую систему и
+                                            спокойно
+                                            переносит заморозки.
+                                            Осенняя посадка осуществляется до наступления постоянных холодов, где-то
+                                            за
+                                            2 месяца до них. Поскольку не всегда можно точно спрогнозировать
+
+                                        </p>
+                                    </div>
+                                    <div class="product-tab__paragraph spoiler __shown">
+                                        <h5 class="product-tab__paragraph-title spoiler__button">
+                                            Заболевания
+                                            <span class="spoiler__chevron icon-chevron-down"></span>
+                                        </h5>
+                                        <p class="product-tab__paragraph-text spoiler__content">
+                                            У сорта Лель средняя устойчивость к клястероспориозу, но при этом тля на
+                                            него практически не нападает. Абрикос подвержен заболеваниям: камедетечение,
+                                            монилиоз, дырчатая пятнистость, гриб Валс, вертицилез. Для устранения
+                                            развития патогенных микроорганизмов и излечения заболевших растений, деревья
+                                            опрыскивают медьсодержащими препаратами. Подойдут бордоская смесь, Хорус,
+                                            Микосан.
+                                            Уберечь культуру от вредителей помогает обработка инсектицидами или посадка
+                                            поблизости с саженцами лекарственных и пряных трав с резким запахом.
+                                            Лаванда, чабрец, бархатцы, календула или укроп прекрасно подойдут для этого.
+                                        </p>
+                                    </div>
+                                    <div class="product-tab__paragraph spoiler __shown">
+                                        <h5 class="product-tab__paragraph-title spoiler__button">
+                                            Полезные свойства
+                                            <span class="spoiler__chevron icon-chevron-down"></span>
+                                        </h5>
+                                        <p class="product-tab__paragraph-text spoiler__content">
+                                            У плодов абрикоса в свежем и сушеном виде присутствуют общеукрепляющие,
+                                            противоатеросклеротические, слабительные, мочегонные свойства. Они
+                                            благотворно влияют на кроветворение и обмен веществ. Плоды абрикоса – это
+                                            превосходный источник витаминов группы В, аскорбиновой кислоты, калия,
+                                            железа.
+                                            Клечатка будет отличной профилактикой рака толстой кишки.
+                                        </p>
+                                    </div>
+                                    <div class="product-tab__paragraph product-tab__paragraph--colored">
+                                        <h5 class="product-tab__paragraph-title spoiler__button">
+                                            Применение в кулинарии
+                                            <img src="/flowers-club/img/icons/product-tabs/chef.svg" alt="Кулинария">
+                                        </h5>
+                                        <p class="product-tab__paragraph-text spoiler__content">
+                                            Универсальное назначение. Плоды употребляются свежими, сушат, делают
+                                            варенье, варят компот. А еще из них готовят пюре для прикорма.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="tabs__content-item">
+                                    <div class="comments">
+                                        <ul class="comments__list">
+                                            <li class="comment">
+                                                <div class="comment__avatar">
+                                                    <img class="comment__avatar-img"
+                                                        src="/flowers-club/img/users/marmi/avatar.jpg"
+                                                        alt="Фото профиля">
+                                                </div>
+                                                <div class="comment__body">
+                                                    <div class="comment__profile-name">
+                                                        Евгения Турчанова
+                                                    </div>
+                                                    <div class="comment__content">
+                                                        <p class="comment__content-text">
+                                                            Отлично, лаконично. Фанера прям королева + бетон и синий
+                                                            цвет.
+                                                        </p>
+                                                    </div>
+                                                    <div class="comment__bottom">
+                                                        <div class="comment__buttons">
+                                                            <button class="comment__button" type="button">
+                                                                <svg>
+                                                                    <use xlink:href="#icon-heart"></use>
+                                                                </svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="comment__date">
+                                                            Вчера
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="comment">
+                                                <div class="comment__avatar">
+                                                    <img class="comment__avatar-img"
+                                                        src="/flowers-club/img/users/marmi/avatar.jpg"
+                                                        alt="Фото профиля">
+                                                </div>
+                                                <div class="comment__body">
+                                                    <div class="comment__profile-name">
+                                                        Марьяна Ми
+                                                    </div>
+                                                    <div class="comment__content">
+                                                        <p class="comment__content-text">
+                                                            из исходника - темной узкой квартиры - дизайнеры сделали
+                                                            интересную
+                                                            необычную квартиру. Именно тот случай, когда помощь
+                                                            дизайнера
+                                                            интерьера просто необходима. Лаконично и по-мужски
+                                                            получилось, по
+                                                            характеру заказчика.
+                                                        </p>
+                                                    </div>
+                                                    <div class="comment__bottom">
+                                                        <div class="comment__buttons">
+                                                            <button class="comment__button" type="button">
+                                                                <svg>
+                                                                    <use xlink:href="#icon-heart"></use>
+                                                                </svg>
+                                                                12
+                                                            </button>
+                                                        </div>
+                                                        <div class="comment__date">
+                                                            01.03.2023
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="comment">
+                                                <div class="comment__avatar">
+                                                    <img class="comment__avatar-img"
+                                                        src="/flowers-club/img/users/marmi/avatar.jpg"
+                                                        alt="Фото профиля">
+                                                </div>
+                                                <div class="comment__body">
+                                                    <div class="comment__profile-name">
+                                                        Ольга Семенова
+                                                    </div>
+                                                    <div class="comment__content">
+                                                        <p class="comment__content-text">
+                                                            У меня конечно "старорежимные" взгляды, но... На 56 метрах
+                                                            спальня
+                                                            фактически на кухне, а расположившиеся на диване гости
+                                                            любуются
+                                                            дверью в санузел? Ну не знаю... А так да - модно,
+                                                            экологично,
+                                                            фанера, бетон...
+                                                        </p>
+                                                    </div>
+                                                    <div class="comment__bottom">
+                                                        <div class="comment__buttons">
+                                                            <button class="comment__button" type="button">
+                                                                <svg>
+                                                                    <use xlink:href="#icon-heart"></use>
+                                                                </svg>
+                                                                1
+                                                            </button>
+                                                        </div>
+                                                        <div class="comment__date">
+                                                            28.02.2023
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="comments__write">
+                                            <img src="/flowers-club/img/avatars/default.png" alt="Фото профиля"
+                                                class="comments__write-avatar">
+                                            <div class="comments__write-input-wrapper">
+                                                <input class="comments__write-input" type="text"
+                                                    placeholder="Написать комментарий">
+                                                <div class="comments__write-upload">
+                                                    <label class="comments__write-icon icon-camera">
+                                                        <input type="file">
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tabs__content-item">
+                                    <div class="product-tab__paragraph">
+                                        <h5 class="product-tab__paragraph-title">
+                                            Курьерской службой СДЭК
+                                        </h5>
+                                        <p class="product-tab__paragraph-text">
+                                            Доставка в отделение - минимальная сумма доставки от 400 рублей
+                                            Адресная доставка курьером - отсутствие комиссии при оплате наличными
+                                            курьеру.
+                                            Сроки доставки – от 1 до 5 дней после отправки.
+                                            В стоимость товара НЕ ВКЛЮЧЕНЫ почтовые сборы.
+                                        </p>
+                                    </div>
+                                    <div class="product-tab__paragraph">
+                                        <h5 class="product-tab__paragraph-title">
+                                            Почта России
+                                        </h5>
+                                        <p class="product-tab__paragraph-text">
+                                            Сроки доставки – от 3 до 14 дней с момента отправки Стоимость доставки – от
+                                            200 рублей В стоимость товара НЕ ВКЛЮЧЕНЫ почтовые сборы.
+                                        </p>
+                                    </div>
+                                    <div class="product-tab__paragraph">
+                                        <h5 class="product-tab__paragraph-title">
+                                            Оплата
+                                        </h5>
+                                        <p class="product-tab__paragraph-text">
+                                            Наложенный платеж - оплата происходит в момент получения товара. Оплата
+                                            онлайн - оплата происходит в момент оформления заказа, или после оформления
+                                            заказа вы можете связаться с менеджером компании.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section products-recommend">
+                    <div class="content__container">
+                        <h3 class="section__title">Смотреть похожие товары</h3>
+                        <ul class="products-list">
+                            <li class="products-list__item">
+                                <div class="product-card">
+                                    <div class="product-card__buttons">
+                                        <button
+                                            class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                        <button
+                                            class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                    </div>
+                                    <div class="product-card__image">
+                                        <a href="/flowers-club/shop/catalog/trees_plodovye/product/">
+                                            <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                alt="Голден Делишес">
+                                        </a>
+                                    </div>
+                                    <div class="product-card__info">
+                                        <div class="product-card__rating star-rating"></div>
+                                        <div class="product-card__title">
+                                            <a href="#">
+                                                Яблоки Голден Делишес
+                                            </a>
+                                        </div>
+                                        <div class="product-card__price">
+                                            390 ₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list__item">
+                                <div class="product-card">
+                                    <div class="product-card__buttons">
+                                        <button
+                                            class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                        <button
+                                            class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                    </div>
+                                    <div class="product-card__image">
+                                        <img class="product-card__image-img"
+                                            src="/flowers-club/img/products/apples/ligolred/1.png" alt="Голден Делишес">
+                                    </div>
+                                    <div class="product-card__info">
+                                        <div class="product-card__rating star-rating"></div>
+                                        <div class="product-card__title">
+                                            <a href="#">
+                                                Яблоки Лиголред
+                                            </a>
+                                        </div>
+                                        <div class="product-card__price">
+                                            420 ₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list__item">
+                                <div class="product-card">
+                                    <div class="product-card__buttons">
+                                        <button
+                                            class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                        <button
+                                            class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                    </div>
+                                    <div class="product-card__image">
+                                        <a href="/flowers-club/shop/catalog/trees_plodovye/product/">
+                                            <img class="product-card__image-img"
+                                                src="/flowers-club/img/products/apples/golden-delicious/1.png"
+                                                alt="Голден Делишес">
+                                        </a>
+                                    </div>
+                                    <div class="product-card__info">
+                                        <div class="product-card__rating star-rating"></div>
+                                        <div class="product-card__title">
+                                            <a href="#">
+                                                Яблоки Голден Делишес
+                                            </a>
+                                        </div>
+                                        <div class="product-card__price">
+                                            390 ₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="products-list__item">
+                                <div class="product-card">
+                                    <div class="product-card__buttons">
+                                        <button
+                                            class="product-card__button product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+                                        <button
+                                            class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart"></button>
+                                    </div>
+                                    <div class="product-card__image">
+                                        <img class="product-card__image-img"
+                                            src="/flowers-club/img/products/apples/ligolred/1.png" alt="Голден Делишес">
+                                    </div>
+                                    <div class="product-card__info">
+                                        <div class="product-card__rating star-rating"></div>
+                                        <div class="product-card__title">
+                                            <a href="#">
+                                                Яблоки Лиголред
+                                            </a>
+                                        </div>
+                                        <div class="product-card__price">
+                                            420 ₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    @@include("../../../../html-snippets/icons.html")
+
+    <script src="/flowers-club/js/swiper-bundle.min.js"></script>
+    <script src="/flowers-club/js/scripts.js"></script>
+    <script src="/flowers-club/js/shop.js"></script>
+</body>
+
+</html>

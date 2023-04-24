@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('../../html-snippets/head.html')
+    <link rel="stylesheet" href="/flowers-club/css/swiper-bundle.min.css">
+    <title>Клуб Садоводов</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            @@include("../../html-snippets/header-aside.html")
+            <div class="content profile">
+                @@include("../../html-snippets/profile-nav-tile.html")
+                <div class="profile__content">
+                    <div class="profile__user profile-user tile">
+                        <div class="profile-user__main">
+                            <div class="profile-user__upper">
+                                <div class="profile-user__avatar-name">
+                                    <div class="profile-user__avatar">
+                                        <div class="profile-user__avatar-default"></div>
+                                        <button
+                                            class="profile-user__avatar-edit icon-wrapper icon-wrapper--circle icon-pen"
+                                            type="button"></button>
+                                    </div>
+                                    <div class="profile-user__name-location">
+                                        <div class="profile-user__name">Марьяна Ми</div>
+                                        <div class="profile-user__location">
+                                            <span class="icon-location"></span>
+                                            Краснодар
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="profile-user__buttons"
+                                    data-dynamic-adaptive=".profile__buttons-mobile, 599">
+                                    <button class="button" type="button">
+                                        <span class="icon-crown"></span>
+                                        Вступить в клуб
+                                    </button>
+                                    <a href="/flowers-club/profile/change/" class="button button--gray-pink"
+                                        type="button">
+                                        Изменить профиль
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="profile-user__stats">
+                                <ul class="profile-user__stats-forum stats-forum">
+                                    <li class="stats-forum__item">
+                                        <div class="stats-forum__item-title">
+                                            Тем на форуме
+                                        </div>
+                                        <div class="stats-forum__item-number">
+                                            0
+                                        </div>
+                                    </li>
+                                    <li class="stats-forum__item">
+                                        <div class="stats-forum__item-title">
+                                            Комментариев
+                                        </div>
+                                        <div class="stats-forum__item-number">
+                                            0
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="profile-stats">
+                                    <li class="profile-stats__item">
+                                        <div class="profile-stats__title">Стаж садовода</div>
+                                        <div class="profile-stats__number">4 года</div>
+                                    </li>
+                                    <li class="profile-stats__item">
+                                        <div class="profile-stats__title">Зона USDA</div>
+                                        <div class="profile-stats__number">Вторая</div>
+                                    </li>
+                                    <li class="profile-stats__item">
+                                        <div class="profile-stats__title">Любимые растения</div>
+                                        <div class="profile-stats__number">Розы</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="profile-user__tabs tabs">
+                            <div class="tabs__buttons-list">
+                                <button class="tabs__button">
+                                    Мой сад
+                                </button>
+                                <button class="tabs__button">
+                                    Избранные статьи
+                                </button>
+                                <button class="tabs__button">
+                                    Понравившиеся товары
+                                </button>
+                            </div>
+                            <div class="tabs__content">
+                                <div class="tabs__content-item">
+                                    <button class="link link--add">
+                                        + Добавить
+                                    </button>
+                                </div>
+                                <div class="tabs__content-item">
+                                    <button class="link link--add">
+                                        + Добавить
+                                    </button>
+                                </div>
+                                <div class="tabs__content-item">
+                                    <button class="link link--add">
+                                        + Добавить
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile__buttons-mobile"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/flowers-club/js/swiper-bundle.min.js"></script>
+    <script src="/flowers-club/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+// <ОБЫЧНЫЙ ШРИФТ>====================================================================================
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/flowers-club/fonts/Ubuntu/regular/Ubuntu.eot");
+  src: url("/flowers-club/fonts/Ubuntu/regular/Ubuntu.eot?#iefix") format("embedded-opentype"),
+    url("/flowers-club/fonts/Ubuntu/regular/Ubuntu.woff2") format("woff2"),
+    url("/flowers-club/fonts/Ubuntu/regular/Ubuntu.woff") format("woff"),
+    url("/flowers-club/fonts/Ubuntu/regular/Ubuntu.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/flowers-club/fonts/Ubuntu/medium/Ubuntu.eot");
+  src: url("/flowers-club/fonts/Ubuntu/medium/Ubuntu.eot?#iefix") format("embedded-opentype"),
+    url("/flowers-club/fonts/Ubuntu/medium/Ubuntu.woff2") format("woff2"),
+    url("/flowers-club/fonts/Ubuntu/medium/Ubuntu.woff") format("woff"),
+    url("/flowers-club/fonts/Ubuntu/medium/Ubuntu.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("/flowers-club/fonts/Ubuntu/light/Ubuntu.eot");
+  src: url("/flowers-club/fonts/Ubuntu/light/Ubuntu.eot?#iefix") format("embedded-opentype"),
+    url("/flowers-club/fonts/Ubuntu/light/Ubuntu.woff2") format("woff2"),
+    url("/flowers-club/fonts/Ubuntu/light/Ubuntu.woff") format("woff"),
+    url("/flowers-club/fonts/Ubuntu/light/Ubuntu.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/flowers-club/fonts/OpenSans/regular/OpenSans.eot");
+  src: url("/flowers-club/fonts/OpenSans/regular/OpenSans.eot?#iefix") format("embedded-opentype"),
+    url("/flowers-club/fonts/OpenSans/regular/OpenSans.woff2") format("woff2"),
+    url("/flowers-club/fonts/OpenSans/regular/OpenSans.woff") format("woff"),
+    url("/flowers-club/fonts/OpenSans/regular/OpenSans.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("/flowers-club/fonts/OpenSans/bold/OpenSans.eot");
+  src: url("/flowers-club/fonts/OpenSans/bold/OpenSans.eot?#iefix") format("embedded-opentype"),
+    url("/flowers-club/fonts/OpenSans/bold/OpenSans.woff2") format("woff2"),
+    url("/flowers-club/fonts/OpenSans/bold/OpenSans.woff") format("woff"),
+    url("/flowers-club/fonts/OpenSans/bold/OpenSans.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/flowers-club/fonts/Lato/regular/Lato.eot");
+  src: url("/flowers-club/fonts/Lato/regular/Lato.eot?#iefix") format("embedded-opentype"),
+    url("/flowers-club/fonts/Lato/regular/Lato.woff2") format("woff2"),
+    url("/flowers-club/fonts/Lato/regular/Lato.woff") format("woff"),
+    url("/flowers-club/fonts/Lato/regular/Lato.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/flowers-club/fonts/Lato/semibold/Lato.eot");
+  src: url("/flowers-club/fonts/Lato/semibold/Lato.eot?#iefix") format("embedded-opentype"),
+    url("/flowers-club/fonts/Lato/semibold/Lato.woff2") format("woff2"),
+    url("/flowers-club/fonts/Lato/semibold/Lato.woff") format("woff"),
+    url("/flowers-club/fonts/Lato/semibold/Lato.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  src: url("/flowers-club/fonts/Lato/medium-italic/Lato.eot");
+  src: url("/flowers-club/fonts/Lato/medium-italic/Lato.eot?#iefix") format("embedded-opentype"),
+    url("/flowers-club/fonts/Lato/medium-italic/Lato.woff2") format("woff2"),
+    url("/flowers-club/fonts/Lato/medium-italic/Lato.woff") format("woff"),
+    url("/flowers-club/fonts/Lato/medium-italic/Lato.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+// <ОБЫЧНЫЙ ШРИФТ>====================================================================================
+
+// <ИКОНОЧНЫЙ ШРИФТ>==================================================================================
+// динамический
+@font-face {
+  font-family: "icon-font";
+  src: url("/flowers-club/fonts/Icon/dynamic/icon-font.eot?5e0q8g");
+  src: url("/flowers-club/fonts/Icon/dynamic/icon-font.eot?5e0q8g#iefix") format("embedded-opentype"),
+    url("/flowers-club/fonts/Icon/dynamic/icon-font.ttf?5e0q8g") format("truetype"),
+    url("/flowers-club/fonts/Icon/dynamic/icon-font.woff?5e0q8g") format("woff"),
+    url("/flowers-club/fonts/Icon/dynamic/icon-font.svg?5e0q8g#icon-font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"]::before,
+[class*=" icon-"]::before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icon-font" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-filter::before {
+  content: "\e920";
+}
+.icon-bullet-list::before {
+  content: "\e91f";
+}
+.icon-clip::before {
+  content: "\e91e";
+}
+.icon-chevron-down::before {
+  content: "\e91c";
+}
+.icon-trash-can::before {
+  content: "\e91d";
+}
+.icon-refresh::before {
+  content: "\e91b";
+}
+.icon-checkmark::before {
+  content: "\e906";
+}
+.icon-user::before {
+  content: "\e917";
+}
+.icon-chats::before {
+  content: "\e918";
+}
+.icon-preferences::before {
+  content: "\e919";
+}
+.icon-ruble-circle::before {
+  content: "\e91a";
+}
+.icon-chat::before {
+  content: "\e916";
+}
+.icon-camera::before {
+  content: "\e915";
+}
+.icon-repost::before {
+  content: "\e914";
+}
+.icon-arrow::before {
+  content: "\e900";
+}
+.icon-bell::before {
+  content: "\e901";
+}
+.icon-bookmark::before {
+  content: "\e902";
+}
+.icon-bookmark-colored::before {
+  content: "\e903";
+}
+.icon-calendar::before {
+  content: "\e904";
+}
+.icon-cart::before {
+  content: "\e905";
+}
+.icon-crown::before {
+  content: "\e907";
+}
+.icon-female-sign::before {
+  content: "\e908";
+}
+.icon-heart::before {
+  content: "\e909";
+}
+.icon-location::before {
+  content: "\e90a";
+}
+.icon-male-sign::before {
+  content: "\e90b";
+}
+.icon-out::before {
+  content: "\e90c";
+}
+.icon-pen::before {
+  content: "\e90d";
+}
+.icon-search::before {
+  content: "\e90e";
+}
+.icon-star::before {
+  content: "\e90f";
+}
+.icon-star-colored::before {
+  content: "\e910";
+}
+.icon-telegram::before {
+  content: "\e911";
+}
+.icon-vk::before {
+  content: "\e912";
+}
+.icon-youtube::before {
+  content: "\e913";
+}
+
+// <ИКОНОЧНЫЙ ШРИФТ>==================================================================================

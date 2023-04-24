@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('html-snippets/head.html')
+    <link rel="stylesheet" href="/flowers-club/css/swiper-bundle.min.css">
+    <title>Клуб Садоводов</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            @@include("html-snippets/header-aside.html")
+            <div class="content">
+                <section class="section">
+                    <div class="content__container">
+                        <h2 class="section__title">Новости</h2>
+                        <div class="toggle-slider-container">
+                            <div class="news swiper toggle-slider"
+                                data-params="sliderMedia:849; swiperSelector:.news; wrapperClass:news__list; slideClass:news__list-card; spaceBetween:21; slidesPerView:1.1">
+                                <ul class="news__list">
+                                    <li class="news__list-card news-card news-card--big">
+                                        <div class="news-card__image-container">
+                                            <img src="/flowers-club/img/news-cards/1.png"
+                                                alt="В Тюмени открылась онлайн-школа «Здоровый садовод»"
+                                                class="news-card__image">
+                                        </div>
+                                        <div class="news-card__text">
+                                            <h4 class="news-card__title">
+                                                <a href="#">
+                                                    В Тюмени открылась онлайн-школа «Здоровый садовод»
+                                                </a>
+                                            </h4>
+                                            <p class="news-card__description">
+                                                <a href="#">
+                                                    В Тюменской области начались лекции онлайн-школы "Здоровый садовод",
+                                                    присоединиться
+                                                    к
+                                                    которой может каждый желающий любитель садоводства!
+                                                </a>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="news__list-card news-card">
+                                        <div class="news-card__image-container">
+                                            <img src="/flowers-club/img/news-cards/2.png"
+                                                alt="В Тюмени открылась онлайн-школа «Здоровый садовод»"
+                                                class="news-card__image">
+                                        </div>
+                                        <div class="news-card__text">
+                                            <h4 class="news-card__title">
+                                                <a href="#">
+                                                    В Тюмени открылась онлайн-школа «Здоровый садовод»
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="news__list-card news-card">
+                                        <div class="news-card__image-container">
+                                            <img src="/flowers-club/img/news-cards/3.png"
+                                                alt="В Тюмени открылась онлайн-школа «Здоровый садовод»"
+                                                class="news-card__image">
+                                        </div>
+                                        <div class="news-card__text">
+                                            <h4 class="news-card__title">
+                                                <a href="#">
+                                                    В Тюмени открылась онлайн-школа «Здоровый садовод»
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="news__list-card news-card">
+                                        <div class="news-card__image-container">
+                                            <img src="/flowers-club/img/news-cards/4.png"
+                                                alt="В Тюмени открылась онлайн-школа «Здоровый садовод»"
+                                                class="news-card__image">
+                                        </div>
+                                        <div class="news-card__text">
+                                            <h4 class="news-card__title">
+                                                <a href="#">
+                                                    В Тюмени открылась онлайн-школа «Здоровый садовод»
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                    <li class="news__list-card news-card">
+                                        <div class="news-card__image-container">
+                                            <img src="/flowers-club/img/news-cards/5.png"
+                                                alt="В Тюмени открылась онлайн-школа «Здоровый садовод»"
+                                                class="news-card__image">
+                                        </div>
+                                        <div class="news-card__text">
+                                            <h4 class="news-card__title">
+                                                <a href="#">
+                                                    В Тюмени открылась онлайн-школа «Здоровый садовод»
+                                                </a>
+                                            </h4>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="content__container">
+                        <div class="choose-article swiper toggle-slider"
+                            data-params="sliderMedia:1159; swiperSelector:.choose-article; wrapperClass:choose-article__list; slideClass:choose-article__list-tag;">
+                            <h3 class="choose-article__title">Выбрать тему:</h3>
+                            <ul class="choose-article__list">
+                                <li class="choose-article__list-tag tag">
+                                    Уход за растениями и агротехника
+                                </li>
+                                <li class="choose-article__list-tag tag">
+                                    Экология
+                                </li>
+                                <li class="choose-article__list-tag tag">
+                                    Дизайн ландшафта
+                                </li>
+                                <li class="choose-article__list-tag tag">
+                                    Льготы и гос. поддержка
+                                </li>
+                                <li class="choose-article__list-tag tag">
+                                    Новости
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="articles swiper toggle-slider"
+                            data-params="sliderMedia:849; swiperSelector:.articles; wrapperClass:articles__wrapper; slideClass:article-card; slidesPerView:1">
+                            <div class="articles__wrapper">
+                                <article class="article-card article-card--big">
+                                    <div class="article-card__mark">
+                                        <button
+                                            class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark"
+                                            type="button"></button>
+                                    </div>
+                                    <div class="article-card__image-container">
+                                        <img src="/flowers-club/img/article-cards/1.png"
+                                            alt="Как выращивать фиолетовый картофель" class="article-card__image">
+                                    </div>
+                                    <div class="article-card__info">
+                                        <ul class="article-card__topics">
+                                            <li class="article-card__topic">Советы</li>
+                                        </ul>
+                                        <div class="article-card__date icon-calendar">
+                                            02.03.2023
+                                        </div>
+                                        <h4 class="article-card__title">
+                                            <a href="/flowers-club/articles/violet-potato">
+                                                Как выращивать фиолетовый картофель
+                                            </a>
+                                        </h4>
+                                        <p class="article-card__text">
+                                            В Тюменской области начались лекции онлайн-школы "Здоровый садовод",
+                                            присоединиться
+                                            к которой могут все желающие. Любителям работы на приусадебных участках
+                                            расскажут о
+                                            том, как следить за своим здоровьем и как оказывать первую помощь...
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="article-card article-card--medium">
+                                    <div class="article-card__mark">
+                                        <button
+                                            class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark"
+                                            type="button"></button>
+                                    </div>
+                                    <div class="article-card__image-container">
+                                        <img src="/flowers-club/img/article-cards/2.png"
+                                            alt="Как выращивать фиолетовый картофель" class="article-card__image">
+                                    </div>
+                                    <div class="article-card__info">
+                                        <ul class="article-card__topics">
+                                            <li class="article-card__topic">Советы</li>
+                                        </ul>
+                                        <div class="article-card__date icon-calendar">
+                                            02.03.2023
+                                        </div>
+                                        <h4 class="article-card__title">
+                                            <a href="/flowers-club/articles/violet-potato">
+                                                Как выращивать фиолетовый картофель
+                                            </a>
+                                        </h4>
+                                        <p class="article-card__text">
+                                            В Тюменской области начались лекции онлайн-школы "Здоровый садовод",
+                                            присоединиться
+                                            к которой могут все желающие. Любителям работы на приусадебных участках
+                                            расскажут о
+                                            том, как следить за своим здоровьем и как оказывать первую помощь...
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="article-card article-card--medium">
+                                    <div class="article-card__mark">
+                                        <button
+                                            class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark"
+                                            type="button"></button>
+                                    </div>
+                                    <div class="article-card__image-container">
+                                        <img src="/flowers-club/img/article-cards/3.png"
+                                            alt="Как выращивать фиолетовый картофель" class="article-card__image">
+                                    </div>
+                                    <div class="article-card__info">
+                                        <ul class="article-card__topics">
+                                            <li class="article-card__topic">Советы</li>
+                                        </ul>
+                                        <div class="article-card__date icon-calendar">
+                                            02.03.2023
+                                        </div>
+                                        <h4 class="article-card__title">
+                                            <a href="/flowers-club/articles/violet-potato">
+                                                Как выращивать фиолетовый картофель
+                                            </a>
+                                        </h4>
+                                        <p class="article-card__text">
+                                            В Тюменской области начались лекции онлайн-школы "Здоровый садовод",
+                                            присоединиться
+                                            к которой могут все желающие. Любителям работы на приусадебных участках
+                                            расскажут о
+                                            том, как следить за своим здоровьем и как оказывать первую помощь...
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="article-card article-card--horizontal">
+                                    <div class="article-card__image-container">
+                                        <img src="/flowers-club/img/article-cards/4.png"
+                                            alt="Как выращивать фиолетовый картофель" class="article-card__image">
+                                    </div>
+                                    <div class="article-card__info">
+                                        <ul class="article-card__topics">
+                                            <li class="article-card__topic">Советы</li>
+                                        </ul>
+                                        <div class="article-card__date icon-calendar">
+                                            02.03.2023
+                                        </div>
+                                        <h4 class="article-card__title">
+                                            <a href="/flowers-club/articles/violet-potato">
+                                                Как выращивать фиолетовый картофель
+                                            </a>
+                                        </h4>
+                                        <p class="article-card__text">
+                                            В Тюменской области начались лекции онлайн-школы "Здоровый садовод",
+                                            присоединиться
+                                            к которой могут все желающие. Любителям работы на приусадебных участках
+                                            расскажут о
+                                            том, как следить за своим здоровьем и как оказывать первую помощь...
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="article-card article-card--medium">
+                                    <div class="article-card__mark">
+                                        <button
+                                            class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark"
+                                            type="button"></button>
+                                    </div>
+                                    <div class="article-card__image-container">
+                                        <img src="/flowers-club/img/article-cards/5.png"
+                                            alt="Как выращивать фиолетовый картофель" class="article-card__image">
+                                    </div>
+                                    <div class="article-card__info">
+                                        <ul class="article-card__topics">
+                                            <li class="article-card__topic">Советы</li>
+                                        </ul>
+                                        <div class="article-card__date icon-calendar">
+                                            02.03.2023
+                                        </div>
+                                        <h4 class="article-card__title">
+                                            <a href="/flowers-club/articles/violet-potato">
+                                                Как выращивать фиолетовый картофель
+                                            </a>
+                                        </h4>
+                                        <p class="article-card__text">
+                                            В Тюменской области начались лекции онлайн-школы "Здоровый садовод",
+                                            присоединиться
+                                            к которой могут все желающие. Любителям работы на приусадебных участках
+                                            расскажут о
+                                            том, как следить за своим здоровьем и как оказывать первую помощь...
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="article-card article-card--medium">
+                                    <div class="article-card__mark">
+                                        <button
+                                            class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark"
+                                            type="button"></button>
+                                    </div>
+                                    <div class="article-card__image-container">
+                                        <img src="/flowers-club/img/article-cards/6.png"
+                                            alt="Как выращивать фиолетовый картофель" class="article-card__image">
+                                    </div>
+                                    <div class="article-card__info">
+                                        <ul class="article-card__topics">
+                                            <li class="article-card__topic">Советы</li>
+                                        </ul>
+                                        <div class="article-card__date icon-calendar">
+                                            02.03.2023
+                                        </div>
+                                        <h4 class="article-card__title">
+                                            <a href="/flowers-club/articles/violet-potato">
+                                                Как выращивать фиолетовый картофель
+                                            </a>
+                                        </h4>
+                                        <p class="article-card__text">
+                                            В Тюменской области начались лекции онлайн-школы "Здоровый садовод",
+                                            присоединиться
+                                            к которой могут все желающие. Любителям работы на приусадебных участках
+                                            расскажут о
+                                            том, как следить за своим здоровьем и как оказывать первую помощь...
+                                        </p>
+                                    </div>
+                                </article>
+                                <article class="article-card article-card--horizontal article-card--no-image">
+                                    <div class="article-card__image-container">
+                                        <img src="/flowers-club/img/article-cards/4.png"
+                                            alt="Как выращивать фиолетовый картофель" class="article-card__image">
+                                    </div>
+                                    <div class="article-card__info">
+                                        <ul class="article-card__topics">
+                                            <li class="article-card__topic">Советы</li>
+                                        </ul>
+                                        <div class="article-card__date icon-calendar">
+                                            02.03.2023
+                                        </div>
+                                        <h4 class="article-card__title">
+                                            <a href="/flowers-club/articles/violet-potato">
+                                                Как выращивать фиолетовый картофель
+                                            </a>
+                                        </h4>
+                                        <p class="article-card__text">
+                                            В Тюменской области начались лекции онлайн-школы "Здоровый садовод",
+                                            присоединиться
+                                            к которой могут все желающие. Любителям работы на приусадебных участках
+                                            расскажут о
+                                            том, как следить за своим здоровьем и как оказывать первую помощь...
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="/flowers-club/js/swiper-bundle.min.js"></script>
+    <script src="/flowers-club/js/scripts.js"></script>
+</body>
+
+</html>

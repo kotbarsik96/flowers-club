@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('../../html-snippets/head.html')
+    <title>Каталог</title>
+    <style>
+        :root {
+            --article_topic_color: var(--red);
+            --article-card-noimage_color: #fff4f1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            @@include("../../html-snippets/header-aside.html")
+            @@include("../../html-snippets/catalog.html")
+            <div class="content">
+                <div class="content__container">
+                    <div class="catalog-cards">
+                        <div class="catalog-cards__bigger">
+                            <div class="catalog-card"
+                                style="background-image: url('/flowers-club/img/catalog/trees_plodovye.png')">
+                                <a class="catalog-card__button button"
+                                    href="/flowers-club/shop/catalog/trees_plodovye/">
+                                    Плодовые деревья
+                                </a>
+                            </div>
+                            <div class="catalog-card catalog-card--long"
+                                style="background-image: url('/flowers-club/img/catalog/strawberry.png')">
+                                <a class="catalog-card__button button"
+                                    href="/flowers-club/shop/catalog/trees_plodovye/">
+                                    Земляника садовая
+                                </a>
+                            </div>
+                        </div>
+                        <div class="catalog-cards__smaller">
+                            <div class="catalog-card"
+                                style="background-image: url('/flowers-club/img/catalog/grapes.png')">
+                                <a class="catalog-card__button button"
+                                    href="/flowers-club/shop/catalog/trees_plodovye/">
+                                    Виноград
+                                </a>
+                            </div>
+                            <div class="catalog-card"
+                                style="background-image: url('/flowers-club/img/catalog/rose.png')">
+                                <a class="catalog-card__button button"
+                                    href="/flowers-club/shop/catalog/trees_plodovye/">
+                                    Розы
+                                </a>
+                            </div>
+                            <div class="catalog-card"
+                                style="background-image: url('/flowers-club/img/catalog/blueberry.png')">
+                                <a class="catalog-card__button button"
+                                    href="/flowers-club/shop/catalog/trees_plodovye/">
+                                    Ягодные кустарники
+                                </a>
+                            </div>
+                            <div class="catalog-card"
+                                style="background-image: url('/flowers-club/img/catalog/seeds.png')">
+                                <a class="catalog-card__button button"
+                                    href="/flowers-club/shop/catalog/trees_plodovye/">
+                                    Семена
+                                </a>
+                            </div>
+                            <div class="catalog-card"
+                                style="background-image: url('/flowers-club/img/catalog/decorative_trees.png')">
+                                <a class="catalog-card__button button"
+                                    href="/flowers-club/shop/catalog/trees_plodovye/">
+                                    Декоративные деревья
+                                </a>
+                            </div>
+                            <div class="catalog-card"
+                                style="background-image: url('/flowers-club/img/catalog/decorative_bushes.png')">
+                                <a class="catalog-card__button button"
+                                    href="/flowers-club/shop/catalog/trees_plodovye/">
+                                    Декоративные кустарники
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/flowers-club/js/scripts.js"></script>
+    <script src="/flowers-club/js/shop.js"></script>
+</body>
+
+</html>
