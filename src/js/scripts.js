@@ -81,7 +81,12 @@ class HtmlElementCustoms {
         /* params:
             transitionDur: 0 (в мс)
         */
+        function setDefaultParams() {
+            if (!parseInt(params.transitionDur)) params.transitionDur = 0;
+            else params.transitionDur = parseInt(params.transitionDur);
+        }
         setDefaultParams();
+
         return new Promise(resolve => {
             element.style.cssText = `
             opacity: 0; 
@@ -93,38 +98,35 @@ class HtmlElementCustoms {
                 resolve();
             }, params.transitionDur);
         });
-
-        function setDefaultParams() {
-            if (!parseInt(params.transitionDur)) params.transitionDur = 0;
-            else params.transitionDur = parseInt(params.transitionDur);
-        }
     }
     insert(element, parentNode, params = {}) {
         /* params:
             transitionDur: 0 (в мс)
             insertType: "prepend"|"append"
         */
-        setDefaultParams();
-
-        element.style.cssText = `
-            opacity: 0; 
-            transition: all ${params.transitionDur / 1000}s ease;
-        `;
-        parentNode[params.insertType](element);
-
-        setTimeout(() => {
-            element.style.opacity = "1";
-        }, 0);
-        setTimeout(() => {
-            element.style.removeProperty("transition");
-        }, params.transitionDur);
-
         function setDefaultParams() {
             if (!parseInt(params.transitionDur))
                 params.transitionDur = 0;
             if (params.insertType !== "prepend" && params.insertType !== "append")
                 params.insertType = "prepend";
         }
+        setDefaultParams();
+
+        return new Promise(resolve => {
+            element.style.cssText = `
+            opacity: 0; 
+            transition: all ${params.transitionDur / 1000}s ease;
+        `;
+            parentNode[params.insertType](element);
+
+            setTimeout(() => {
+                element.style.opacity = "1";
+                resolve();
+            }, 0);
+            setTimeout(() => {
+                element.style.removeProperty("transition");
+            }, params.transitionDur);
+        });
     }
 }
 const htmlElementMethods = new HtmlElementCustoms();
@@ -155,6 +157,37 @@ function createElement(tagName, className, insertingHTML) {
     if (insertingHTML) element.insertAdjacentHTML("afterbegin", insertingHTML);
     return element;
 }
+
+function getScrollWidth() {
+    const block = createElement("div");
+    block.style.cssText = `position: absolute; top: -100vh, right: -100vw; z-index: -999; opacity: 0; width: 100px; height: 100px; overflow: scroll`;
+    const blockInner = createElement("div");
+    blockInner.style.cssText = `width: 100%; height: 200px`;
+    block.append(blockInner);
+
+    document.body.append(block);
+    const width = block.offsetWidth - block.clientWidth;
+    block.remove();
+    return width;
+}
+
+function setLockScrollObserver() {
+    const observer = new MutationObserver(callback);
+    observer.observe(document.body, { attributes: true, attributeOldValue: true });
+
+    function callback() {
+        const scrollWidth = getScrollWidth();
+        const wrapper = document.querySelector(".wrapper");
+        const currentPadding = parseInt(getComputedStyle(wrapper).paddingRight.replace(/\D/g, "").trim());
+
+        if (document.body.classList.contains("__locked-scroll")) {
+            wrapper.style.paddingRight = `${currentPadding + scrollWidth}px`;
+        } else {
+            wrapper.style.paddingRight = `${currentPadding - scrollWidth}px`;
+        }
+    }
+}
+setLockScrollObserver();
 
 // если нужно, чтобы в this.params класса были дефолтные параметры. Вызывается после присваивания this.params обязательно с контекстом this: setDefaultParams.call(this, defaultParams)
 function setDefaultParams(defaultParams) {
@@ -501,7 +534,6 @@ class Tabs {
 
         this.rootElem.removeAttribute("data-params");
         this.getData();
-
 
         this.buttonsListContainer.append(this.line);
         if (this.buttons.length > this.contentItems.length) {
@@ -894,6 +926,7 @@ class AmountChange {
 class Popups {
     constructor(node) {
         this.rootElem = node;
+        this.popups = [];
         this.popupsContainer = createElement("div", "popups-container");
     }
     createNewPopup(params = {}) {
@@ -911,18 +944,18 @@ class Popups {
         if (destroyTimeout) {
             setTimeout(() => this.removePopup(popup), destroyTimeout);
         }
+        this.popups.push(popup);
     }
     renderBody(contentParams = {}) {
         /* contentParams:
-            title: HTMLString,
             applyButton: { 
                 callback: function(){}, title: HTMLString, className: string,rewriteClassName: boolean
             },
             cancelButton: { 
                 callback: function(){}, title: HTMLString, className: string, rewriteClassName: boolean
             }
-            body: HTMLString (полная замена того, что будет в переменной body),
-            bodyContent: HTMLString (заменяет только часть того, что будет в переменной body. Не сработает, если в этом же объекте передано body)
+            body: HTMLString (полная замена того, что будет в переменной bodyInner),
+            bodyContent: HTMLString (заменяет только часть того, что будет в переменной bodyInner. Не сработает, если в этом же объекте передано body)
         */
         setDefaultContentParams.call(this);
 
@@ -932,7 +965,7 @@ class Popups {
             ? contentParams.body
             : ` 
                 <div class="popup__close-container">
-                    <button class="popup__close menu-button __active" type="button"></button>
+                    <button class="popup__close close" type="button"></button>
                 </div>
                 <div class="popup__body">
                     <div class="popup__content">
@@ -997,9 +1030,11 @@ class Popups {
     }
     removePopup(popup) {
         htmlElementMethods.remove(popup, { transitionDur: 300 });
+        const index = this.popups.indexOf(popup);
+        this.popups.splice(index, 1);
     }
 }
-// с помощью методов класса можно вызвать новые попапы, удалить созданные
+// с помощью методов класса можно вызвать новые попапы, удалить созданные. Новый попап можно создать, передав параметры содержимого в него (текст, кнопки и др.)
 const popupsMethods = new Popups();
 
 // data-popup-call="name:popupName", где popupName используется в callPopup(popupName)
@@ -1052,6 +1087,238 @@ class PopupCall {
 }
 // ================================= ПОПАПЫ - конец ================================= //
 
+// ================================ МОДАЛЬНЫЕ ОКНА - начало ========================= //
+class Modals {
+    constructor(node) {
+        this.onResize = this.onResize.bind(this);
+
+        this.rootElem = node;
+        this.modalsContainer = createElement("div", "modals-container");
+        this.calledModals = [];
+        this.modalsInContainer = [];
+
+        window.addEventListener("resize", this.onResize);
+        this.onResize();
+    }
+    onResize() {
+        setModalContainerHeight.call(this);
+
+        function setModalContainerHeight() {
+            const heights = this.modalsInContainer
+                .map(modalParams => modalParams.modal.offsetHeight)
+                .sort((height1, height2) => {
+                    if (height1 > height2) return -1;
+                    if (height1 < height2) return 1;
+                    return 0;
+                });
+            const biggestHeight = heights[0];
+            const windowHeight = document.documentElement.clientHeight || window.innerHeight;
+
+            // если высота контента меньше высоты окна 
+            if (biggestHeight + 40 < windowHeight) {
+                this.modalsContainer.classList.remove("__scrollable");
+            }
+            // если высота окна больше высоты контента
+            else {
+                this.modalsContainer.classList.add("__scrollable");
+            }
+        }
+    }
+    createNewModal(params = {
+        removeOtherModals: false, modalName: "", refresh: false, modalInitParams: {}
+    }) {
+        /* params:
+            removeOtherModals: false|true - удалить ли остальные окна в this.modalsContainer
+            modalName: string - название модального окна, по которому будет вызван соответствующий наследник класса Modal
+            refresh: false|true - если было уже вызвано окно с этим же modalName, оно будет храниться в this.calledModals, что позволит не реинициализировать его в дальнейшем. В случае, если refresh === true, оно будет удалено оттуда и его придется реиницализировать
+        */
+        if (!this.modalsContainer.closest("body")) {
+            htmlElementMethods.insert(this.modalsContainer, document.body, { transitionDur: 200 });
+            document.body.classList.add("__locked-scroll");
+        }
+
+        const modalParams = this.renderModal(params);
+        this.calledModals.push(modalParams);
+        this.modalsInContainer.push(modalParams);
+
+        htmlElementMethods.insert(modalParams.modal, this.modalsContainer, { transitionDur: 500 })
+            .then(this.onResize);
+        modalParams.modal.addEventListener("close", () => this.removeModalFromPage(modalParams));
+    }
+    renderModal(params = {}) {
+        const modalName = params.modalName;
+        const refresh = params.refresh;
+        getModalParams = getModalParams.bind(this);
+
+        let modalParams;
+
+        switch (modalName) {
+            case "auth": modalParams = getModalParams(ModalAuth);
+                break;
+        }
+
+        return modalParams;
+
+        function getModalParams(classInstance) {
+            const existingParams = this.calledModals.find(inpP => inpP instanceof classInstance);
+            if (existingParams) {
+                if (refresh) {
+                    const modalParams = new classInstance(params.modalInitParams);
+                    setTimeout(() => this.removeModal(existingParams), 1000);
+                    return modalParams;
+                } else return existingParams;
+            }
+
+            return new classInstance(params.modalInitParams);
+        }
+    }
+    removeModalFromPage(modalParams) {
+        if (!modalParams.modal) return;
+
+        htmlElementMethods.remove(modalParams.modal, { transitionDur: 300 });
+        const index = this.modalsInContainer.findIndex(inpP => inpP.modal === modalParams.modal);
+        if (index >= 0) this.modalsInContainer.splice(index, 1);
+
+        if (this.modalsInContainer.length < 1) {
+            htmlElementMethods.remove(this.modalsContainer, { transitionDur: 200 });
+            document.body.classList.remove("__locked-scroll");
+        }
+    }
+    removeModal(modalParams) {
+        if (!modalParams.modal) return;
+
+        this.removeModalFromPage(modalParams);
+        const index = this.calledModals.findIndex(inpP => inpP.modal === modalParams.modal);
+        if (index >= 0) this.calledModals.splice(index, 1);
+    }
+}
+// с помощью методов класса на страницу добавляются новые модальные окна. В отличии от попапов, чтобы создать новое окно, нужно полностью 
+const modalsMethods = new Modals();
+
+class ModalCall {
+    constructor(node) {
+        this.onClick = this.onClick.bind(this);
+
+        this.rootElem = node;
+        this.callingParams = fromStringToObject(this.rootElem.dataset.modalCall);
+
+        this.rootElem.addEventListener("click", this.onClick);
+    }
+    onClick() {
+        const modalName = this.callingParams.name;
+        this.callModal(modalName);
+    }
+    callModal(modalName) {
+        const removeOtherModals = this.callingParams.removeOtherModals === "true"
+            ? true : false;
+        const refresh = this.callingParams.refresh === "true" ? true : false;
+        const modalInitParams = this.callingParams;
+
+        modalsMethods.createNewModal({
+            modalName,
+            refresh,
+            removeOtherModals,
+            modalInitParams
+        });
+    }
+}
+
+class Modal {
+    constructor(params = {}) {
+        this.onCrossClick = this.onCrossClick.bind(this);
+
+        this.params = params;
+        this.modal = this.renderModal();
+        this.closeBtn = this.modal.querySelector(".modal__close-button");
+
+        this.closeBtn.addEventListener("click", this.onCrossClick);
+    }
+    onCrossClick() {
+        this.modal.dispatchEvent(new CustomEvent("close"));
+    }
+}
+class ModalAuth extends Modal {
+    constructor(params = {}) {
+        super(params);
+
+        this.id = Math.random();
+    }
+    renderModal() {
+        let iframeSrc = this.params.iframeSrc || "";
+        if (iframeSrc.match(/undefined/i) || !iframeSrc) iframeSrc = "/flowers-club/auth/signup/index.html";
+
+        const modalInner = `
+        <div class="auth-modal__close-container modal__close-container">
+            <button class="auth-modal__close-button modal__close-button" type="button">
+                <span class="auth-modal__close-cross modal__close-cross close"></span>
+                <span class="auth-modal__close-text modal__close-text">Регистрация</span>
+            </button>
+        </div>
+        <div class="auth-modal__content modal__content">
+            <div class="auth-modal__socials">
+                <div class="auth-modal__socials-title">
+                    Вход через соцсети
+                </div>
+                <ul class="auth-modal__socials-list">
+                    <li class="auth-modal__socials-item">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="auth-modal__socials-item">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="#odnoklassniki"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="auth-modal__socials-item">
+                        <a href="#">
+                            <svg>
+                                <use xlink:href="#vkontakte"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <iframe class="auth-modal__iframe modal__iframe"
+                src="${iframeSrc}" frameborder="0"></iframe>
+        </div>
+
+        <svg display="none">
+            <symbol id="facebook" viewBox="0 0 50 50" fill="none">
+                <rect width="50" height="50" rx="25" fill="#4267B2" />
+                <path
+                    d="M26.6696 41.6672V26.4622H31.7733L32.5374 20.5366H26.6696V16.7533C26.6696 15.0377 27.146 13.8685 29.6064 13.8685L32.7442 13.867V8.56722C32.2013 8.49527 30.3388 8.33398 28.1719 8.33398C23.6478 8.33398 20.5505 11.0953 20.5505 16.1667V20.5368H15.4336V26.4624H20.5503V41.6673L26.6696 41.6672Z"
+                    fill="white" />
+            </symbol>
+        </svg>
+        <svg display="none">
+            <symbol id="odnoklassniki" viewBox="0 0 50 50" fill="none">
+                <rect width="50" height="50" rx="25" fill="#EE8208" />
+                <path
+                    d="M25.0009 13.3758C26.9651 13.3758 28.5628 14.9735 28.5628 16.9377C28.5628 18.9003 26.9647 20.498 25.0009 20.498C23.038 20.498 21.4398 18.9003 21.4398 16.9377C21.4394 14.9731 23.0384 13.3758 25.0009 13.3758ZM25.0009 25.5373C29.7455 25.5373 33.6038 21.6802 33.6038 16.9377C33.6038 12.1928 29.7459 8.33398 25.0009 8.33398C20.2568 8.33398 16.398 12.1932 16.398 16.9377C16.398 21.6802 20.2568 25.5373 25.0009 25.5373ZM28.4813 32.5545C30.251 32.1514 31.9399 31.4521 33.4766 30.4861C34.0423 30.1302 34.4435 29.5641 34.5918 28.9124C34.7401 28.2607 34.6235 27.5768 34.2676 27.0111C34.0916 26.7307 33.862 26.4878 33.592 26.2962C33.3221 26.1046 33.0169 25.9681 32.6942 25.8945C32.3714 25.8209 32.0372 25.8117 31.7109 25.8673C31.3845 25.923 31.0724 26.0424 30.7922 26.2188C27.2678 28.4346 22.7316 28.433 19.2101 26.2188C18.93 26.0424 18.6178 25.9229 18.2915 25.8672C17.9651 25.8116 17.631 25.8208 17.3083 25.8944C16.9855 25.968 16.6804 26.1045 16.4105 26.2961C16.1405 26.4877 15.911 26.7307 15.735 27.0111C15.379 27.5767 15.2622 28.2605 15.4103 28.9122C15.5584 29.5638 15.9593 30.13 16.5248 30.4861C18.0614 31.4518 19.7499 32.1511 21.5193 32.5545L16.7101 37.3645C16.2375 37.8373 15.9721 38.4784 15.9722 39.1469C15.9723 39.8154 16.238 40.4565 16.7108 40.9291C17.1835 41.4017 17.8247 41.6671 18.4932 41.667C19.1617 41.6669 19.8027 41.4012 20.2753 40.9284L25.0001 36.2029L29.7278 40.9289C29.9615 41.163 30.2391 41.3487 30.5447 41.4754C30.8503 41.6021 31.1779 41.6673 31.5087 41.6673C31.8395 41.6673 32.1671 41.6021 32.4727 41.4754C32.7783 41.3487 33.0559 41.163 33.2896 40.9289C33.5241 40.6951 33.7101 40.4174 33.837 40.1117C33.9639 39.8059 34.0293 39.4781 34.0293 39.1471C34.0293 38.816 33.9639 38.4882 33.837 38.1825C33.7101 37.8767 33.5241 37.599 33.2896 37.3653L28.4813 32.5545Z"
+                    fill="white" />
+            </symbol>
+        </svg>
+        <svg display="none">
+            <symbol id="vkontakte" viewBox="0 0 50 50" fill="none">
+                <rect width="50" height="50" rx="25" fill="#5181B8" />
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M40.9006 17.2232C41.1324 16.4507 40.9006 15.8828 39.7977 15.8828H36.151C35.2237 15.8828 34.7965 16.3733 34.5647 16.9143C34.5647 16.9143 32.7101 21.4344 30.0829 24.3705C29.233 25.2204 28.8467 25.4905 28.3831 25.4905C28.1512 25.4905 27.8157 25.2204 27.8157 24.4478V17.2232C27.8157 16.2959 27.5467 15.8828 26.7738 15.8828H21.0433C20.464 15.8828 20.1155 16.3131 20.1155 16.721C20.1155 17.6001 21.4288 17.8028 21.5643 20.2752V25.6455C21.5643 26.8229 21.3517 27.0365 20.8881 27.0365C19.6519 27.0365 16.6449 22.4958 14.8612 17.3006C14.5116 16.2907 14.161 15.8828 13.229 15.8828H9.58232C8.54041 15.8828 8.33203 16.3733 8.33203 16.9143C8.33203 17.8802 9.56852 22.6709 14.0886 29.0067C17.1023 33.3332 21.3476 35.6791 25.211 35.6791C27.5292 35.6791 27.8157 35.1581 27.8157 34.2608V30.9905C27.8157 29.9486 28.0353 29.7407 28.7691 29.7407C29.3104 29.7407 30.2374 30.0111 32.4012 32.0973C34.8736 34.5695 35.281 35.6791 36.672 35.6791H40.3187C41.3606 35.6791 41.8815 35.1581 41.5809 34.13C41.2522 33.1053 40.0717 31.619 38.5052 29.8566C37.6553 28.852 36.3802 27.7702 35.9942 27.2295C35.4532 26.534 35.6077 26.2251 35.9942 25.6072C35.9942 25.6072 40.4369 19.3485 40.9006 17.2235V17.2232Z"
+                    fill="white" />
+            </symbol>
+        </svg>
+        `;
+        const modal = createElement("div", "modal auth-modal", modalInner);
+
+        return modal;
+    }
+}
+// ================================= МОДАЛЬНЫЕ ОКНА - конец ========================= //
+
 let inittingSelectors = [
     { selector: ".search-wrapper", classInstance: Search },
     { selector: ".spoiler", classInstance: Spoiler },
@@ -1064,6 +1331,7 @@ let inittingSelectors = [
     { selector: ".select", classInstance: Select },
     { selector: ".amount-change", classInstance: AmountChange },
     { selector: "[data-popup-call]", classInstance: PopupCall },
+    { selector: "[data-modal-call]", classInstance: ModalCall },
 ];
 
 let isInitting = false;

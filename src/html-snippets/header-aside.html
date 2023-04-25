@@ -110,9 +110,13 @@
         </a>
         <!-- неавторизованный -->
         <span class="fw-500" data-dynamic-adaptive="#header-user-links-mobile, 1439">
-            <a class="link" href="#">Войти</a>
+            <button class="link" type="button" data-modal-call="name:auth; refresh:true; iframeSrc:/flowers-club/auth/login/index.html">
+                Войти
+            </button>
             <span class="link">/</span>
-            <a class="link" href="#">Регистрация</a>
+            <button class="link" type="button" data-modal-call="name:auth; refresh:true; iframeSrc:/flowers-club/auth/signup/index.html">
+                Регистрация
+            </button>
         </span>
     </div>
 </header>

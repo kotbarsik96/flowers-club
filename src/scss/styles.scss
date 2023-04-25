@@ -179,6 +179,7 @@ body.__locked-scroll {
     display: inline-flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     padding: 14px 30px;
     font-weight: 700;
 
@@ -262,6 +263,33 @@ body.__locked-scroll {
 
     &--red {
         color: var(--red);
+    }
+}
+
+.close {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        background: var(--gray_brown);
+        width: 100%;
+        height: 2px;
+        border-radius: 50px;
+        display: inline-block;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
     }
 }
 
@@ -371,6 +399,11 @@ body.__locked-scroll {
     border-radius: 50%;
     color: #fff;
     padding-bottom: 2px;
+}
+
+.text {
+    font-size: 18px;
+    line-height: 21px;
 }
 
 h1,
@@ -499,6 +532,10 @@ label {
             color: #999;
             font-size: 18px;
             line-height: 21px;
+
+            &:hover {
+                color: var(--blue);
+            }
         }
 
         .icon-wrapper:hover {
@@ -1739,33 +1776,6 @@ label {
         margin-bottom: 24px;
     }
 
-    &__close {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30px;
-        height: 30px;
-
-        &::before,
-        &::after {
-            content: "";
-            position: absolute;
-            background: var(--gray_brown);
-            width: 100%;
-            height: 2px;
-            border-radius: 50px;
-            display: inline-block;
-        }
-
-        &::before {
-            transform: rotate(45deg);
-        }
-        &::after {
-            transform: rotate(-45deg);
-        }
-    }
-
     &__content {
         font-size: 18px;
         line-height: 21px;
@@ -1783,6 +1793,337 @@ label {
     }
 }
 // <ПОПАП>========================================================================================
+
+// <МОДАЛЬНОЕ ОКНО>===============================================================================
+.modals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+
+    &.__scrollable {
+        align-items: flex-start;
+        overflow: auto;
+    }
+}
+
+.modal-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    @media (max-width: 1439px) {
+        padding: 30px 0;
+    }
+}
+.modal {
+    border-radius: 30px;
+    position: relative;
+
+    &__close-button {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    &__iframe {
+        width: 100%;
+        height: 100%;
+    }
+
+    @media (max-width: 979px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        border-radius: 0;
+        z-index: 500;
+
+        &__close-container {
+            height: 60px;
+            width: 100%;
+            background: var(--dark_red);
+            position: relative;
+            top: 0;
+            right: 0;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        &__close-button {
+            position: relative;
+            top: 0;
+            right: 0;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            line-height: 18px;
+        }
+
+        &__close-cross {
+            margin-right: 20px;
+
+            &::before,
+            &::after {
+                background-color: #fff;
+            }
+        }
+
+        &__close-text {
+            display: block;
+        }
+
+        &__content {
+            overflow: auto;
+            max-height: calc(100% - 60px);
+        }
+    }
+}
+// <МОДАЛЬНОЕ ОКНО>===============================================================================
+
+// <ОКНО ВХОДА>===================================================================================
+.auth-modal {
+    width: 940px;
+    height: 640px;
+    position: relative;
+    background: url("/flowers-club/img/signup/background.png") center/cover no-repeat;
+    display: flex;
+    justify-content: flex-end;
+
+    &__iframe-inner {
+        width: 380px;
+        overflow: hidden;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__close-container {
+        width: 100%;
+        height: 20px;
+        position: absolute;
+        top: 20px;
+        right: 0;
+        z-index: 50;
+    }
+
+    &__close-cross {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        top: 0;
+        left: 0;
+        right: auto;
+
+        &::before,
+        &::after {
+            background-color: var(--gray_brown);
+        }
+    }
+
+    &__close-text {
+        display: none;
+    }
+
+    &__content {
+        height: 100%;
+        flex: 0 0 55%;
+        border-radius: 30px;
+        padding: 60px 60px 0 60px;
+        position: relative;
+        z-index: 40;
+        background: #fff;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    &__socials {
+        position: absolute;
+        border-radius: 50px;
+        background: #fff;
+        padding: 64px 16px;
+        left: 0;
+        transform: translate(-50%, 0);
+        width: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__socials-title {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__socials-item {
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        svg {
+            width: 50px;
+            height: 50px;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 40px;
+        margin-bottom: 40px;
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    &__input-container {
+        margin-bottom: 10px;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        font-size: 16px;
+        line-height: 50px;
+        padding: 0 20px 4px 20px;
+
+        .text-input {
+            &__wrapper {
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+
+            &__input {
+                border: none;
+                border-radius: 50px;
+            }
+        }
+    }
+
+    &__input-container-country {
+        width: 38px;
+        height: 38px;
+    }
+
+    &__conditions {
+        margin: 10px 0 20px 0;
+    }
+
+    &__button {
+        width: 100%;
+    }
+
+    &__offer {
+        margin-top: 20px;
+
+        .link {
+            color: var(--blue);
+
+            &:hover {
+                color: var(--red);
+            }
+        }
+    }
+
+    &__forgot-password {
+        margin: 10px 0 30px 0;
+
+        .link {
+            text-decoration: underline;
+            color: #858585;
+            font-size: 14px;
+            line-height: 20px;
+
+            &:hover {
+                color: var(--blue);
+            }
+        }
+    }
+
+    &__sms-code {
+        margin: 15px 0 20px 0;
+    }
+
+    @media (max-width: 979px) {
+        &__content {
+            border-radius: 0;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__iframe {
+            flex: 0 0 475px;
+        }
+
+        &__socials {
+            position: relative;
+            top: 0;
+            left: 0;
+            order: 2;
+            padding: 40px 0 20px 0;
+            transform: none;
+            width: auto;
+        }
+
+        &__socials-list {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__socials-item {
+            margin-bottom: 0;
+            margin-right: 20px;
+        }
+    }
+}
+// <ОКНО ВХОДА>===================================================================================
+
+// <СМС-КОД>======================================================================================
+.sms-code {
+    display: flex;
+
+    &__input {
+        width: 40px;
+        height: 60px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-size: 36px;
+        line-height: 41px;
+        text-align: center;
+        color: #5f5f5f;
+        margin-right: 7px;
+    }
+}
+// <СМС-КОД>======================================================================================
 
 // <НАВИГЦИОННАЯ ПАНЕЛЬ>==========================================================================
 .nav-tile {
@@ -2572,6 +2913,29 @@ label {
         &::before {
             font-size: 20px;
             color: #999;
+        }
+    }
+
+    &__password-see {
+        cursor: pointer;
+        position: absolute;
+        top: 11px;
+        right: 22px;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &::before {
+            font-size: 20px;
+            color: #999;
+            transition: color 0.2s;
+        }
+    }
+    &__password-see.__shown {
+        &::before {
+            color: var(--red);
         }
     }
 }
@@ -3769,7 +4133,7 @@ label {
 
 // <РЕКОМЕНДУЕМЫЕ ТОВАРЫ>=========================================================================
 .products-recommend {
-    margin-top: 120px;
+    margin-top: 40px;
 
     .products-list {
         &__item {
@@ -4348,6 +4712,12 @@ label {
         font-size: 18px;
         line-height: 21px;
         flex: 1 1 auto;
+        max-width: 33%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
     }
 
     &__header-item,
@@ -4365,10 +4735,8 @@ label {
         color: #999;
     }
 
-    &__list {
-    }
-
     &__item {
+        position: relative;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -4377,18 +4745,116 @@ label {
         margin-bottom: 20px;
     }
 
-    &__item-price {
+    &__item-price,
+    &__item-total {
         font-size: 24px;
         line-height: 28px;
     }
 
-    &__item-amount {
-    }
-
-    &__item-total {
-    }
-
     &__item-remove {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 18px;
+
+        &::before {
+            cursor: pointer;
+            color: #999;
+        }
+    }
+
+    &__bottom {
+        max-width: 980px;
+        padding-right: 80px;
+        margin-left: auto;
+    }
+
+    &__total {
+        margin: 40px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__total-title {
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+    }
+
+    &__total-price {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    @media (max-width: 992px) {
+        &__item-image {
+            margin-right: 20px;
+        }
+    }
+    @media (max-width: 767px) {
+        &__header {
+            display: none;
+        }
+
+        &__item {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            height: 120px;
+        }
+
+        &__item-position {
+            justify-content: flex-start;
+        }
+
+        &__item-image {
+            grid-row: 1 / -1;
+            grid-column: 1 / 2;
+            width: auto;
+            height: 100%;
+        }
+
+        &__item-title {
+            grid-row: 1 / 1;
+            grid-column: 2 / -1;
+            white-space: nowrap;
+            max-width: none;
+            font-size: 14px;
+            line-height: 16px;
+            display: block;
+        }
+
+        &__item-price {
+            grid-row: 2 / 2;
+            margin: 10px 0;
+        }
+
+        &__item-amount {
+            grid-row-start: 3;
+            margin-bottom: 17px;
+        }
+
+        &__item-total {
+            grid-column-start: -1;
+            grid-row-start: -2;
+            margin-right: 12px;
+        }
+
+        &__bottom {
+            padding-right: 0;
+        }
+    }
+    @media (max-width: 399px) {
+        &__item-image {
+            display: none;
+        }
+
+        &__item-title {
+            grid-column: 1 / -1;
+        }
     }
 }
 // <КОРЗИНА>======================================================================================

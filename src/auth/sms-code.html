@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    @@include('../html-snippets/head.html')
+    <title>Вход</title>
+</head>
+
+<body class="auth-modal__iframe-inner">
+    <form class="auth-modal__container login-form">
+        <div class="auth-modal__text">
+            На Ваш телефон отправили код подтверждения, введите его ниже, чтобы закончить регистрацию
+        </div>
+        <div class="auth-modal__sms-code sms-code"></div>
+        <a class="auth-modal__button button" href="/flowers-club/auth/sms-code.html">
+            Подтвердить
+        </a>
+        <div class="auth-modal__offer">
+            <a href="/flowers-club/auth/signup/" class="link">Не получили код?</a>
+        </div>
+    </form>
+
+    <script src="/flowers-club/js/scripts.js"></script>
+    <script src="/flowers-club/js/forms.js"></script>
+</body>
+
+</html>

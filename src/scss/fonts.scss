@@ -126,6 +126,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-eye-slash::before {
+  content: "\e921";
+}
 .icon-filter::before {
   content: "\e920";
 }
