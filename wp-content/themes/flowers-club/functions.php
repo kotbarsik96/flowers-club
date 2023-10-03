@@ -744,7 +744,6 @@ function set_article_data($post = null)
 
 function get_static_menu($name)
 {
-    error_log(print_r($name, true));
     include get_stylesheet_directory() . '/' . 'static-menu/' . $name . '.php';
 }
 

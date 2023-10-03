@@ -4,9 +4,3 @@ readme.html
 debug.log
 cache/
 uploads/
-wp-content/plugins/easy-wp-smtp/
-wp-content/plugins/edit-author-slug/
-wp-content/plugins/mailpoet/
-wp-content/plugins/safe-svg/
-wp-content/plugins/simple-user-avatar/
-wp-content/plugins/woocommerce/
