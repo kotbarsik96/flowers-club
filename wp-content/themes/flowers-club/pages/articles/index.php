@@ -28,7 +28,7 @@
                             if ($i === 1) : ?>
                                 <article class="article-card article-card--medium" <?= set_article_data() ?>>
                                     <div class="article-card__mark">
-                                        <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button"></button>
+                                        <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button" aria-label="В закладки"></button>
                                     </div>
                                     <div class="article-card__image-container">
                                         <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>" class="article-card__image">
@@ -86,7 +86,7 @@
                             <?php elseif ($i === 3) : ?>
                                 <article class="article-card article-card--medium" <?= set_article_data() ?>>
                                     <div class="article-card__mark">
-                                        <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button"></button>
+                                        <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button" aria-label="В закладки"></button>
                                     </div>
                                     <div class="article-card__image-container">
                                         <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>" class="article-card__image">
@@ -118,7 +118,7 @@
                             <?php elseif ($i === 4) : ?>
                                 <article class="article-card article-card--medium" <?= set_article_data() ?>>
                                     <div class="article-card__mark">
-                                        <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button"></button>
+                                        <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button" aria-label="В закладки"></button>
                                     </div>
                                     <div class="article-card__image-container">
                                         <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>" class="article-card__image">

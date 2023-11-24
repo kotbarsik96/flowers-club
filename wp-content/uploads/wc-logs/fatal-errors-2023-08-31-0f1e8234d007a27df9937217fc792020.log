@@ -1,0 +1,303 @@
+2023-08-31T05:15:33+00:00 CRITICAL Uncaught Error: Call to a member function get_category_ids() on bool in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:52
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php(97): FLCL_Page_Breadcrumbs->post_page()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(5): flcl_breadcrumbs()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#8 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 52
+
+2023-08-31T05:15:37+00:00 CRITICAL Uncaught Error: Call to a member function get_category_ids() on bool in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:52
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php(97): FLCL_Page_Breadcrumbs->post_page()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(5): flcl_breadcrumbs()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#8 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 52
+
+2023-08-31T05:16:55+00:00 CRITICAL Uncaught Error: Call to a member function get_category_ids() on bool in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:52
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php(98): FLCL_Page_Breadcrumbs->post_page()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(5): flcl_breadcrumbs()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#8 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 52
+
+2023-08-31T05:17:45+00:00 CRITICAL Uncaught Error: Call to a member function get_category_ids() on bool in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:52
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php(98): FLCL_Page_Breadcrumbs->post_page()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(5): flcl_breadcrumbs()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#8 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 52
+
+2023-08-31T05:19:13+00:00 CRITICAL Uncaught Error: Call to a member function get_category_ids() on bool in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:52
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php(98): FLCL_Page_Breadcrumbs->post_page()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(5): flcl_breadcrumbs()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#8 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 52
+
+2023-08-31T05:19:23+00:00 CRITICAL Uncaught Error: Call to a member function get_category_ids() on bool in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:52
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php(99): FLCL_Page_Breadcrumbs->post_page()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(5): flcl_breadcrumbs()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#8 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 52
+
+2023-08-31T08:34:49+00:00 CRITICAL Uncaught Error: Access to undeclared static property FLCL_Product_Attributes::$product_attributes_translation in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php:863
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(21): FLCL_Product_Attributes::translate_product_attribute()
+#1 [internal function]: {closure}()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(24): array_map()
+#3 [internal function]: {closure}()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(35): array_map()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#8 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#9 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php on line 863
+
+2023-08-31T08:35:33+00:00 CRITICAL Uncaught Error: Access to undeclared static property FLCL_Product_Attributes::$product_attributes_translation in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php:863
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(21): FLCL_Product_Attributes::translate_product_attribute()
+#1 [internal function]: {closure}()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(24): array_map()
+#3 [internal function]: {closure}()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(35): array_map()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#8 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#9 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php on line 863
+
+2023-08-31T08:41:14+00:00 CRITICAL Uncaught Error: Call to a member function get_only_filtering() on null in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\filter.php:3
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(847): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(59): flcl_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\filter.php on line 3
+
+2023-08-31T08:41:17+00:00 CRITICAL Uncaught Error: Call to a member function get_only_filtering() on null in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\filter.php:3
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(847): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(59): flcl_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\filter.php on line 3
+
+2023-08-31T16:02:46+00:00 CRITICAL Uncaught TypeError: array_filter(): Argument #1 ($array) must be of type array, null given in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1646
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1646): array_filter()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#5 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1646
+
+2023-08-31T16:03:15+00:00 CRITICAL Uncaught TypeError: array_filter(): Argument #1 ($array) must be of type array, null given in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1646
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1646): array_filter()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#5 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1646
+
+2023-08-31T16:04:37+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1645
+Stack trace:
+#0 [internal function]: Ajax_Catalog_Page->{closure}()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1649): array_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1645
+
+2023-08-31T16:04:44+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1645
+Stack trace:
+#0 [internal function]: Ajax_Catalog_Page->{closure}()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1649): array_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1645
+
+2023-08-31T16:05:49+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1643
+Stack trace:
+#0 [internal function]: Ajax_Catalog_Page->{closure}()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1647): array_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1643
+
+2023-08-31T16:13:10+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1643
+Stack trace:
+#0 [internal function]: Ajax_Catalog_Page->{closure}()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1647): array_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1643
+
+2023-08-31T16:14:09+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1648
+Stack trace:
+#0 [internal function]: Ajax_Catalog_Page->{closure}()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1649): array_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1648
+
+2023-08-31T16:14:21+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1650
+Stack trace:
+#0 [internal function]: Ajax_Catalog_Page->{closure}()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1651): array_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1650
+
+2023-08-31T16:14:55+00:00 CRITICAL Uncaught TypeError: Cannot access offset of type string on string in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1656
+Stack trace:
+#0 [internal function]: Ajax_Catalog_Page->{closure}()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1657): array_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1656
+
+2023-08-31T16:15:13+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1675
+Stack trace:
+#0 [internal function]: Ajax_Catalog_Page->{closure}()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1690): array_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1675
+
+2023-08-31T16:15:17+00:00 CRITICAL Uncaught Error: Cannot use object of type stdClass as array in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1675
+Stack trace:
+#0 [internal function]: Ajax_Catalog_Page->{closure}()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1690): array_filter()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1675
+
+2023-08-31T16:26:48+00:00 CRITICAL Uncaught TypeError: implode(): Argument #2 ($array) must be of type ?array, string given in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1681
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1681): implode()
+#1 [internal function]: Ajax_Catalog_Page->{closure}()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php(1691): array_filter()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_Catalog_Page->products_query()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#6 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#7 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1681
+
+2023-08-31T16:33:52+00:00 CRITICAL Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, WC_Product_Simple given in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php:59
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(76): FLCL_Product_Attributes->get_product_attr_options()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(42): FLCL_Product_Attributes->get_max_range_value()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php on line 59
+
+2023-08-31T16:34:34+00:00 CRITICAL Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, WC_Product_Simple given in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php:59
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(76): FLCL_Product_Attributes->get_product_attr_options()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(42): FLCL_Product_Attributes->get_max_range_value()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php on line 59
+
+2023-08-31T16:34:42+00:00 CRITICAL Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, WC_Product_Simple given in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php:59
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(76): FLCL_Product_Attributes->get_product_attr_options()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(42): FLCL_Product_Attributes->get_max_range_value()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php on line 59
+
+2023-08-31T16:39:26+00:00 CRITICAL Uncaught TypeError: array_key_exists(): Argument #2 ($array) must be of type array, WC_Product_Simple given in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php:93
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(110): FLCL_Product_Attributes->get_product_attr_options()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\catalog.php(42): FLCL_Product_Attributes->get_max_range_value()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\index.php(13): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php on line 93
+

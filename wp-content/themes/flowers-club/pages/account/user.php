@@ -38,10 +38,6 @@ $is_current_user = (int) $user_id === (int) get_current_user_id();
                         </div>
                     </div>
                     <div class="profile-user__buttons" data-dynamic-adaptive=".profile__buttons-mobile, 599">
-                        <!-- <button class="button" type="button">
-                            <span class="icon-crown"></span>
-                            Вступить в клуб
-                        </button> -->
                         <?php if ($is_current_user): ?>
                             <a href="<?= get_page_link(FLCL_ACCOUNT_SETTINGS_PAGE) ?>" class="button button--gray-pink"
                                 type="button">
@@ -185,7 +181,7 @@ $is_current_user = (int) $user_id === (int) get_current_user_id();
                                             <div class="article-card__mark">
                                                 <button
                                                     class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark"
-                                                    type="button"></button>
+                                                    type="button" aria-label="В закладки"></button>
                                             </div>
                                             <div class="article-card__image-container">
                                                 <img src="<?= get_the_post_thumbnail_url() ?>"

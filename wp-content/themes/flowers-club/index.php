@@ -5,7 +5,7 @@
             <h2 class="section__title">Новости</h2>
             <div class="toggle-slider-container">
                 <div class="news swiper toggle-slider" data-params="sliderMedia:849; swiperSelector:.news; wrapperClass:news__list; slideClass:news__list-card; spaceBetween:21; slidesPerView:1.1">
-                    <ul class="news__list">
+                    <div class="news__list">
                         <?php
                         $query = new WP_Query([
                             'posts_per_page' => 5,
@@ -18,16 +18,16 @@
                             $i = 0;
                             $query->the_post();
                         ?>
-                            <li class="news__list-card news-card news-card--big">
+                            <div class="news__list-card news-card news-card--big">
                                 <div class="news-card__image-container">
-                                    <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>" class="news-card__image">
+                                    <img src="<?= get_the_post_thumbnail_url() ?>" alt="Изображение" class="news-card__image">
                                 </div>
                                 <div class="news-card__text">
-                                    <h4 class="news-card__title">
+                                    <div class="news-card__title">
                                         <a href="<?= get_permalink() ?>">
                                             <?= flcl_title($post->ID, ['maxchars' => 100]) ?>
                                         </a>
-                                    </h4>
+                                    </div>
                                     <p class="news-card__description">
                                         <a href="<?= get_permalink() ?>">
                                             <?= kama_excerpt([
@@ -36,30 +36,30 @@
                                         </a>
                                     </p>
                                 </div>
-                            </li>
+                            </div>
                             <?php
                         endif;
 
                         if ($query->have_posts()) : while ($query->have_posts()) : $query->the_post();
                             ?>
-                                <li class="news__list-card news-card">
+                                <div class="news__list-card news-card">
                                     <div class="news-card__image-container">
-                                        <img src="<?= get_the_post_thumbnail_url() ?>" alt="<?php the_title(); ?>" alt="<?php the_title(); ?>" class="news-card__image">
+                                        <img src="<?= get_the_post_thumbnail_url() ?>" alt="Изображение" class="news-card__image">
                                     </div>
                                     <div class="news-card__text">
-                                        <h4 class="news-card__title">
+                                        <div class="news-card__title">
                                             <a href="<?= get_permalink() ?>">
                                                 <?= flcl_title($post->ID, ['maxchars' => 100]) ?>
                                             </a>
-                                        </h4>
+                                        </div>
                                     </div>
-                                </li>
+                                </div>
                         <?php
                             endwhile;
                         endif;
                         wp_reset_postdata();
                         ?>
-                    </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,21 +69,21 @@
             <div class="choose-article">
                 <h3 class="choose-article__title">Выбрать тему:</h3>
                 <div class="choose-article swiper toggle-slider" data-params="sliderMedia:0; widthMedia:min; swiperSelector:.choose-article; wrapperClass:choose-article__list; slideClass:choose-article__list-tag;">
-                    <ul class="choose-article__list" data-choose-taxonomy="main-articles">
-                        <li class="choose-article__list-tag tag" data-category-url="#">
+                    <div class="choose-article__list" data-choose-taxonomy="main-articles">
+                        <div class="choose-article__list-tag tag" data-category-url="#">
                             Все темы
-                        </li>
+                        </div>
                         <?php
                         $all_categories = get_categories();
                         foreach ($all_categories as $cat) :
                         ?>
 
-                            <li class="choose-article__list-tag tag" data-category-url="<?= get_category_link($cat) ?>">
+                            <div class="choose-article__list-tag tag" data-category-url="<?= get_category_link($cat) ?>">
                                 <?= $cat->name ?>
-                            </li>
+                            </div>
 
                         <?php endforeach; ?>
-                    </ul>
+                    </div>
                 </div>
             </div>
             <div class="articles swiper toggle-slider" data-params="sliderMedia:849; swiperSelector:.articles; wrapperClass:articles__wrapper; slideClass:article-card; slidesPerView:1">

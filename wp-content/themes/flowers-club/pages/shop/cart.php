@@ -50,7 +50,7 @@
                                         <?= get_woocommerce_currency_symbol() ?>
                                     </span>
                                 </div>
-                                <button class="cart__item-remove icon-trash-can" type="button"></button>
+                                <button class="cart__item-remove icon-trash-can" type="button" aria-label="Убрать из корзины"></button>
                             </li>
 
                         <?php endforeach; ?>

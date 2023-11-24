@@ -1,0 +1,102 @@
+2023-08-30T10:24:52+00:00 CRITICAL Maximum execution time of 60 seconds exceeded in C:\OSPanel\domains\localhost\wordpress\wp-admin\includes\class-wp-filesystem-direct.php on line 76
+
+2023-08-30T10:46:03+00:00 CRITICAL Uncaught Error: Call to a member function get_average_rating_value() on null in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\product-card.php:15
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(762): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\account\user.php(231): flcl_get_product_card()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#5 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\product-card.php on line 15
+
+2023-08-30T10:46:12+00:00 CRITICAL Uncaught Error: Call to a member function get_average_rating_value() on null in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\product-card.php:15
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(762): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\account\user.php(231): flcl_get_product_card()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#5 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\product-card.php on line 15
+
+2023-08-30T10:46:16+00:00 CRITICAL Uncaught Error: Call to a member function get_average_rating_value() on null in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\product-card.php:15
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(762): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\account\user.php(231): flcl_get_product_card()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#5 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\html-components\shop\product-card.php on line 15
+
+2023-08-30T11:09:57+00:00 CRITICAL Uncaught Error: Call to undefined function is_user_page() in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php:341
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): flcl_template_include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(205): WP_Hook->apply_filters()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(104): apply_filters()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#5 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php on line 341
+
+2023-08-30T12:24:00+00:00 CRITICAL syntax error, unexpected double-quoted string ">", expecting "," or ";" in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\header.php on line 20
+
+2023-08-30T12:48:44+00:00 CRITICAL Uncaught Error: Call to a member function get_name() on null in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:16
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\product.php(19): flcl_get_breadcrumbs()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 16
+
+2023-08-30T12:48:51+00:00 CRITICAL Uncaught Error: Call to a member function get_name() on null in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:16
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\product.php(19): flcl_get_breadcrumbs()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#5 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#6 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 16
+
+2023-08-30T13:03:33+00:00 CRITICAL Cannot declare class FLCL_Page_Breadcrumbs, because the name is already in use in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 2
+
+2023-08-30T13:04:14+00:00 CRITICAL Cannot declare class FLCL_Page_Breadcrumbs, because the name is already in use in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 3
+
+2023-08-30T13:07:20+00:00 CRITICAL Cannot declare class FLCL_Page_Breadcrumbs, because the name is already in use in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 2
+
+2023-08-30T13:07:31+00:00 CRITICAL Uncaught Error: Using $this when not in object context in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:25
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\header.php(13): flcl_breadcrumbs()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-includes\template.php(785): require_once('C:\\OSPanel\\doma...')
+#4 C:\OSPanel\domains\localhost\wordpress\wp-includes\template.php(720): load_template()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-includes\general-template.php(48): locate_template()
+#6 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\product.php(1): get_header()
+#7 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#8 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#9 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#10 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 25
+
+2023-08-30T13:53:58+00:00 CRITICAL Maximum execution time of 60 seconds exceeded in C:\OSPanel\domains\localhost\wordpress\wp-includes\taxonomy.php on line 931
+
+2023-08-30T14:15:21+00:00 CRITICAL Uncaught TypeError: error_log(): Argument #1 ($message) must be of type string, WP_Error given in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php:53
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php(53): error_log()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php(80): FLCL_Page_Breadcrumbs->product_page()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(613): include('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\functions.php(840): get_static_menu()
+#4 C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\product.php(19): flcl_breadcrumbs()
+#5 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include('C:\\OSPanel\\doma...')
+#6 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#7 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#8 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\static-menu\breadcrumbs.php on line 53
+

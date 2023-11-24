@@ -48,7 +48,7 @@ if ($author_data->first_name) {
             </div>
             <div class="comment__bottom">
                 <div class="comment__buttons">
-                    <button class="comment__button" type="button">
+                    <button class="comment__button" type="button" aria-label="Нравится">
                         <svg>
                             <use xlink:href="#icon-heart"></use>
                         </svg>

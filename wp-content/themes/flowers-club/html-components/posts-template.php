@@ -20,7 +20,7 @@ if ($query->have_posts()):
         <?php if ($cycleI === 0): ?>
             <article class="article-card article-card--big" <?= $ajaxQueryType === 'initial' || $ajaxQueryType === 'concat' ? 'data-animate="method:popUp"' : '' ?>             <?= set_article_data() ?>>
                 <div class="article-card__mark">
-                    <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button"></button>
+                    <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button" aria-label="В закладки"></button>
                 </div>
                 <div class="article-card__image-container">
                     <?php
@@ -45,11 +45,11 @@ if ($query->have_posts()):
                     <div class="article-card__date icon-calendar">
                         <?= get_the_date('d.m.Y'); ?>
                     </div>
-                    <h4 class="article-card__title">
+                    <div class="article-card__title">
                         <a href="<?= the_permalink(); ?>">
                             <?= flcl_title($post->ID); ?>
                         </a>
-                    </h4>
+                    </div>
                 </div>
             </article>
         <?php endif ?>
@@ -57,7 +57,7 @@ if ($query->have_posts()):
         <?php if ($cycleI === 1 || $cycleI === 2 || $cycleI === 4 || $cycleI === 5): ?>
             <article class="article-card article-card--medium" <?= $ajaxQueryType === 'initial' || $ajaxQueryType === 'concat' ? 'data-animate="method:popUp"' : '' ?>             <?= set_article_data() ?>>
                 <div class="article-card__mark">
-                    <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button"></button>
+                    <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark" type="button" aria-label="В закладки"></button>
                 </div>
                 <div class="article-card__image-container">
                     <?php
@@ -82,11 +82,11 @@ if ($query->have_posts()):
                     <div class="article-card__date icon-calendar">
                         <?= get_the_date('d.m.Y'); ?>
                     </div>
-                    <h4 class="article-card__title">
+                    <div class="article-card__title">
                         <a href="<?php the_permalink(); ?>">
                             <?= flcl_title($post->ID); ?>
                         </a>
-                    </h4>
+                    </div>
                 </div>
             </article>
         <?php endif ?>
@@ -116,11 +116,11 @@ if ($query->have_posts()):
                     <div class="article-card__date icon-calendar">
                         <?= get_the_date('d.m.Y'); ?>
                     </div>
-                    <h4 class="article-card__title">
+                    <div class="article-card__title">
                         <a href="<?php the_permalink(); ?>">
                             <?= flcl_title($post->ID); ?>
                         </a>
-                    </h4>
+                    </div>
                     <p class="article-card__text">
                         <?= kama_excerpt(['autop' => false]); ?>
                     </p>
@@ -153,11 +153,11 @@ if ($query->have_posts()):
                     <div class="article-card__date icon-calendar">
                         <?= get_the_date('d.m.Y'); ?>
                     </div>
-                    <h4 class="article-card__title">
+                    <div class="article-card__title">
                         <a href="<?php the_permalink(); ?>">
                             <?= flcl_title($post->ID); ?>
                         </a>
-                    </h4>
+                    </div>
                     <p class="article-card__text">
                         <?= kama_excerpt(['autop' => false]); ?>
                         <?= kama_excerpt(['autop' => false]); ?>

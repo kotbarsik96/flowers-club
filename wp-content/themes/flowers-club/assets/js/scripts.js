@@ -2013,7 +2013,7 @@ class Popups {
         let cancelBtnLayout = cancelBtn
             ? `
                 <button class="button popup__button--cancel ${cancelBtn.className || ""}" type="button">
-                ${cancelBtn.title}
+                    ${cancelBtn.title}
                 </button>`
             : "";
 
@@ -2021,7 +2021,7 @@ class Popups {
             ? contentParams.body
             : ` 
                 <div class="popup__close-container">
-                    <button class="popup__close close" type="button"></button>
+                    <button class="popup__close close" type="button" aria-label="Закрыть"></button>
                 </div>
                 <div class="popup__body">
                     <div class="popup__content">
@@ -2261,7 +2261,7 @@ class Modals {
     getGeneralLayout(title = null) {
         return `
             <div class="modal__close-container">
-                <button class="modal__close-button" type="button">
+                <button class="modal__close-button" type="button" aria-label="Закрыть">
                     <span class="modal__close-cross close"></span>
                 </button>
             </div>
@@ -2384,7 +2384,7 @@ class ModalAuth extends Modal {
 
         const modalInner = `
         <div class="auth-modal__close-container modal__close-container">
-            <button class="auth-modal__close-button modal__close-button" type="button">
+            <button class="auth-modal__close-button modal__close-button" type="button" aria-label="Закрыть">
                 <span class="auth-modal__close-cross modal__close-cross close"></span>
                 <span class="auth-modal__close-text modal__close-text">Регистрация</span>
             </button>

@@ -1,0 +1,43 @@
+2023-08-29T06:20:47+00:00 CRITICAL Uncaught Error: Call to a member function get_name() on array in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\cart.php:24
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#3 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\cart.php on line 24
+
+2023-08-29T06:21:12+00:00 CRITICAL Uncaught Error: Call to a member function get_name() on array in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\cart.php:24
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#3 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\cart.php on line 24
+
+2023-08-29T06:22:43+00:00 CRITICAL Uncaught Error: Call to a member function get_name() on array in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\cart.php:26
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#3 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\cart.php on line 26
+
+2023-08-29T06:22:58+00:00 CRITICAL Uncaught Error: Call to a member function get_name() on array in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\cart.php:26
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-includes\template-loader.php(106): include()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-blog-header.php(19): require_once('C:\\OSPanel\\doma...')
+#2 C:\OSPanel\domains\localhost\wordpress\index.php(17): require('C:\\OSPanel\\doma...')
+#3 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\cart.php on line 26
+
+2023-08-29T08:05:38+00:00 CRITICAL Uncaught TypeError: count(): Argument #1 ($value) must be of type Countable|array, string given in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php:1106
+Stack trace:
+#0 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(310): Ajax_User_Actions->remove_from_cart()
+#1 C:\OSPanel\domains\localhost\wordpress\wp-includes\class-wp-hook.php(334): WP_Hook->apply_filters()
+#2 C:\OSPanel\domains\localhost\wordpress\wp-includes\plugin.php(517): WP_Hook->do_action()
+#3 C:\OSPanel\domains\localhost\wordpress\wp-admin\admin-ajax.php(188): do_action()
+#4 {main}
+  thrown in C:\OSPanel\domains\localhost\wordpress\wp-content\plugins\ajax-queries\ajax-queries.php on line 1106
+
+2023-08-29T17:08:28+00:00 CRITICAL syntax error, unexpected token ")" in C:\OSPanel\domains\localhost\wordpress\wp-content\themes\flowers-club\pages\shop\product.php on line 144
+

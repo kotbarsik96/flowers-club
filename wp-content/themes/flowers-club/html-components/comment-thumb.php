@@ -24,7 +24,7 @@ if (array_key_exists('attached_images', $comm_meta) && !empty($comm_meta['attach
 
             <div class="comment__attached-image-container">
                 <div class="comment__attached-image-background"></div>
-                <button class="close" type="button"></button>
+                <button class="close" type="button" aria-label="Удалить изображение"></button>
                 <img src="<?= $value['url'] ?>" alt="" data-attachment-id="<?= $value['id'] ?>">
             </div>
 

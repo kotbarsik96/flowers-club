@@ -11,7 +11,7 @@
                 <div class="text-input__wrapper">
                     <input class="auth-modal__input text-input__input" name="current-password" type="password"
                         placeholder="Введите текущий пароль">
-                    <button class="text-input__password-see icon-eye-slash" type="button"></button>
+                    <button class="text-input__password-see icon-eye-slash" type="button" aria-label="Показать/скрыть пароль"></button>
                 </div>
                 <div class="error">
                     Неверно указан пароль
@@ -21,7 +21,7 @@
                 <div class="text-input__wrapper">
                     <input class="auth-modal__input text-input__input" name="new-password" type="password"
                         placeholder="Введите новый пароль">
-                    <button class="text-input__password-see icon-eye-slash" type="button"></button>
+                    <button class="text-input__password-see icon-eye-slash" type="button" aria-label="Показать/скрыть пароль"></button>
                 </div>
                 <div class="error">
                     <?= INCORRECT_PASSWORD_TEXT ?>
@@ -31,7 +31,7 @@
                 <div class="text-input__wrapper">
                     <input class="auth-modal__input text-input__input" name="new-password-repeat" type="password"
                         placeholder="Повторите новый пароль">
-                    <button class="text-input__password-see icon-eye-slash" type="button"></button>
+                    <button class="text-input__password-see icon-eye-slash" type="button" aria-label="Показать/скрыть пароль"></button>
                 </div>
                 <div class="error">
                     Пароли не совпадают

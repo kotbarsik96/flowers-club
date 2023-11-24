@@ -5,9 +5,9 @@ global $product_user_ratings;
 <div <?= flcl_set_product_data($product, 'product-card') ?>>
     <div class="product-card__buttons">
         <button
-            class="product-card__button product-to-favorites product-card__button--like icon-wrapper icon-wrapper--circle icon-heart"></button>
+            class="product-card__button product-to-favorites product-card__button--like icon-wrapper icon-wrapper--circle icon-heart" aria-label="В избранное"></button>
         <button
-            class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart <?= find_in_cart($product->get_id()) ? '__active' : '' ?>"></button>
+            class="product-card__button product-card__button--cart icon-wrapper icon-wrapper--circle icon-cart <?= find_in_cart($product->get_id()) ? '__active' : '' ?>" aria-label="В корзину"></button>
     </div>
     <div class="product-card__image">
         <a href="<?= get_permalink($product->get_id()) ?>">

@@ -46,13 +46,14 @@ if (isset($tags[0]))
                         <div class="comments__buttons-likes-comments">
                             <button
                                 class="comments__button comments__button-like <?= $posts_likes->has_like($post->ID, get_current_user_id()) ? '__active' : '' ?>"
-                                type="button">
+                                <?php
+                                $likes = $posts_likes->get_likes_amount($post->ID);
+                                echo empty($likes) ? '0' : $likes;
+                                ?>
+                                type="button" aria-label="Нравится (<?= empty($likes) ? '0' : $likes ?>)">
                                 <span class="comments__button-content icon-heart"></span>
                                 <span class="comments__button-content comments__button-content--small">
-                                    <?php
-                                    $likes = $posts_likes->get_likes_amount($post->ID);
-                                    echo empty($likes) ? '0' : $likes;
-                                    ?>
+                                    <?= empty($likes) ? '0' : $likes ?>
                                 </span>
                             </button>
                             <button class="comments__button to-comments" type="button">
@@ -65,7 +66,7 @@ if (isset($tags[0]))
                                 </span>
                             </button>
                         </div>
-                        <button class="comments__button comments__button--repost" type="button">
+                        <button class="comments__button comments__button--repost" type="button" aria-label="Поделиться">
                             <span class="comments__button-content icon-repost"></span>
                         </button>
                     </div>
@@ -100,7 +101,7 @@ if (isset($tags[0]))
                                 <article class="article-card article-card--small" <?= set_article_data() ?>>
                                     <div class="article-card__mark">
                                         <button class="article-card__icon icon-wrapper icon-wrapper--circle icon-bookmark"
-                                            type="button"></button>
+                                            type="button" aria-label="В закладки"></button>
                                     </div>
                                     <div class="article-card__image-container">
                                         <img src="<?= get_the_post_thumbnail_url($post->ID) ?>" alt="<?php the_title() ?>"

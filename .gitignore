@@ -3,4 +3,4 @@ license.txt
 readme.html
 debug.log
 cache/
-uploads/
+# uploads/

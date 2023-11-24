@@ -41,7 +41,7 @@
         <div class="auth-modal__input-container text-input--standard" data-required>
             <div class="text-input__wrapper">
                 <input class="auth-modal__input text-input__input" name="password" type="password" placeholder="Пароль">
-                <button class="text-input__password-see icon-eye-slash" type="button"></button>
+                <button class="text-input__password-see icon-eye-slash" type="button" aria-label="Показать/скрыть пароль"></button>
             </div>
             <div class="error">
                 <?= INCORRECT_PASSWORD_TEXT ?>

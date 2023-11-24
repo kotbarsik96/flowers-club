@@ -16,7 +16,7 @@ $current_user = wp_get_current_user();
             <aside class="site-menu">
                 <div class="site-menu__icons"></div>
                 <div class="site-menu__logo">
-                    <a href="<?= get_permalink(FLCL_HOME_PAGE)?>">
+                    <a href="<?= get_permalink(FLCL_HOME_PAGE) ?>" aria-label="Главная страница">
                         <img src="<?= get_template_directory_uri() ?>/assets/img/icons/logo.png" alt="Клуб Садоводов">
                     </a>
                 </div>
@@ -33,27 +33,26 @@ $current_user = wp_get_current_user();
                         Вступить в клуб
                     </a>
                 </div>
-                <?php if (!is_user_logged_in()): ?>
-                    <button class="button button--white site-menu__sign-up" type="button"
-                        data-modal-call="name:auth; refresh:true; iframeSrc:''<?= get_permalink(FLCL_SIGNUP_PAGE) ?>''">
+                <?php if (!is_user_logged_in()) : ?>
+                    <button class="button button--white site-menu__sign-up" type="button" data-modal-call="name:auth; refresh:true; iframeSrc:''<?= get_permalink(FLCL_SIGNUP_PAGE) ?>''">
                         Регистрация
                     </button>
                 <?php endif ?>
                 <ul class="site-menu__socials">
                     <li class="site-menu__socials-item">
-                        <a class="site-menu__socials-icon icon-telegram" href="https://web.telegram.org/z/"></a>
+                        <a class="site-menu__socials-icon icon-telegram" aria-label="Telegram" href="https://web.telegram.org/z/"></a>
                     </li>
                     <li class="site-menu__socials-item">
-                        <a class="site-menu__socials-icon icon-vk" href="https://vk.com/"></a>
+                        <a class="site-menu__socials-icon icon-vk" aria-label="VKontakte" href="https://vk.com/"></a>
                     </li>
                     <li class="site-menu__socials-item">
-                        <a class="site-menu__socials-icon icon-youtube" href="https://www.youtube.com/"></a>
+                        <a class="site-menu__socials-icon icon-youtube" aria-label="YouTube" href="https://www.youtube.com/"></a>
                     </li>
                 </ul>
                 <div class="site-menu__user-agreement">
                     <a class="link" href="<?= get_page_link(15) ?>">Пользовательское соглашение</a>
                 </div>
-                <?php if (is_user_logged_in()): ?>
+                <?php if (is_user_logged_in()) : ?>
                     <div class="site-menu__logout">
                         <button class="link" type="button" data-logout-button>Выйти из аккаунта</button>
                     </div>
@@ -65,7 +64,7 @@ $current_user = wp_get_current_user();
                     get_static_menu('catalog');
                 ?>
                 <div class="header__logo">
-                    <a href="<?= get_permalink(FLCL_HOME_PAGE) ?>">
+                    <a href="<?= get_permalink(FLCL_HOME_PAGE) ?>" aria-label="Главная страница">
                         <img src="<?= get_template_directory_uri() ?>/assets/img/icons/logo.png" alt="Клуб Садоводов">
                     </a>
                 </div>
@@ -78,35 +77,30 @@ $current_user = wp_get_current_user();
                         </div>
                     </div>
                 </div>
-                <button class="header__menu-button menu-button" type="button">
+                <button class="header__menu-button menu-button" type="button" aria-label="Открыть меню">
                     <span class="menu-button__item"></span>
                     <span class="menu-button__item"></span>
                     <span class="menu-button__item"></span>
                 </button>
                 <div class="header__user-block">
-                    <a class="icon-cart icon-wrapper <?= count(wc()->cart->get_cart()) > 0 ? 'icon-wrapper--notify' : '' ?>" href="<?= get_permalink(FLCL_CART_PAGE) ?>"
-                        data-dynamic-adaptive=".header__icons, 1439"></a>
+                    <a class="icon-cart icon-wrapper <?= count(wc()->cart->get_cart()) > 0 ? 'icon-wrapper--notify' : '' ?>" href="<?= get_permalink(FLCL_CART_PAGE) ?>" data-dynamic-adaptive=".header__icons, 1439" aria-label="Корзина"></a>
 
                     <!-- авторизованный -->
-                    <?php if (is_user_logged_in()): ?>
+                    <?php if (is_user_logged_in()) : ?>
 
-                        <!-- <a class="icon-bell icon-wrapper icon-wrapper--notify" data-dynamic-adaptive=".site-menu__icons, 1439" href="#"></a> -->
-                        <a class="user-avatar" data-dynamic-adaptive=".site-menu__user-block, 1439"
-                            href="<?= get_user_page_url() ?>">
+                        <a class="user-avatar" data-dynamic-adaptive=".site-menu__user-block, 1439" href="<?= get_user_page_url() ?>" aria-label="Профиль">
                             <img src="<?= get_avatar_url($current_user) ?>" alt="Аватар">
                         </a>
 
                         <!-- неавторизованный -->
-                    <?php else: ?>
+                    <?php else : ?>
 
                         <span class="fw-500" data-dynamic-adaptive="#header-user-links-mobile, 1439">
-                            <button class="link" type="button"
-                                data-modal-call="name:auth; refresh:true; iframeSrc:''<?= get_permalink(FLCL_LOGIN_PAGE) ?>''">
+                            <button class="link" type="button" data-modal-call="name:auth; refresh:true; iframeSrc:''<?= get_permalink(FLCL_LOGIN_PAGE) ?>''">
                                 Войти
                             </button>
                             <span class="link">/</span>
-                            <button class="link" type="button"
-                                data-modal-call="name:auth; refresh:true; iframeSrc:''<?= get_permalink(FLCL_SIGNUP_PAGE) ?>''">
+                            <button class="link" type="button" data-modal-call="name:auth; refresh:true; iframeSrc:''<?= get_permalink(FLCL_SIGNUP_PAGE) ?>''">
                                 Регистрация
                             </button>
                         </span>
